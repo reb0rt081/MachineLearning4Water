@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35312.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MachineLearning4Water.Models", "src\Models\MachineLearning4Water.Models.csproj", "{078A6FB4-AFE2-48B6-92E2-F7A5C7230450}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{1BAB39A4-0263-46C0-8F17-020332DF398D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MachineLearning4Water.Models.U.Test", "tests\Models.U.Test\MachineLearning4Water.Models.U.Test.csproj", "{59F65A13-05C0-4DD6-B4CB-C83D755955AF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{078A6FB4-AFE2-48B6-92E2-F7A5C7230450}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{078A6FB4-AFE2-48B6-92E2-F7A5C7230450}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{078A6FB4-AFE2-48B6-92E2-F7A5C7230450}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{078A6FB4-AFE2-48B6-92E2-F7A5C7230450}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59F65A13-05C0-4DD6-B4CB-C83D755955AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59F65A13-05C0-4DD6-B4CB-C83D755955AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59F65A13-05C0-4DD6-B4CB-C83D755955AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59F65A13-05C0-4DD6-B4CB-C83D755955AF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{59F65A13-05C0-4DD6-B4CB-C83D755955AF} = {1BAB39A4-0263-46C0-8F17-020332DF398D}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5E13D254-3D62-4BC2-BA77-A24009AAC852}
+	EndGlobalSection
+EndGlobal
