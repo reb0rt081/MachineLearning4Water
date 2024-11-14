@@ -7,7 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MachineLearning4Water.Model
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{1BAB39A4-0263-46C0-8F17-020332DF398D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MachineLearning4Water.Models.U.Test", "tests\Models.U.Test\MachineLearning4Water.Models.U.Test.csproj", "{59F65A13-05C0-4DD6-B4CB-C83D755955AF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MachineLearning4Water.Models.U.Test", "tests\Models.U.Test\MachineLearning4Water.Models.U.Test.csproj", "{59F65A13-05C0-4DD6-B4CB-C83D755955AF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MachineLearning4Water.Tools", "src\Tools\MachineLearning4Water.Tools.csproj", "{C06F5446-D0BD-46CD-A1DC-7C869CB2CDE0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,6 +25,10 @@ Global
 		{59F65A13-05C0-4DD6-B4CB-C83D755955AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{59F65A13-05C0-4DD6-B4CB-C83D755955AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{59F65A13-05C0-4DD6-B4CB-C83D755955AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C06F5446-D0BD-46CD-A1DC-7C869CB2CDE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C06F5446-D0BD-46CD-A1DC-7C869CB2CDE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C06F5446-D0BD-46CD-A1DC-7C869CB2CDE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C06F5446-D0BD-46CD-A1DC-7C869CB2CDE0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
