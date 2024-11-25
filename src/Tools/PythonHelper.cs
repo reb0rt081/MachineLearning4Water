@@ -39,7 +39,7 @@ namespace MachineLearning4Water.Tools
 
                 foreach (var value in row)
                 {
-                    tempRow.Add((double)value); // Convert Python object to C# int
+                    tempRow.Add((double)value); // Convert Python object to C# double
                 }
 
                 matrix.Add(tempRow);
