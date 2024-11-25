@@ -48,3 +48,7 @@ def MatrixMult(m1, m2):
             temp_row.append(pos_val)
         result.append(temp_row)
     return result
+
+"""
+    TODO: Define methods matrix determinant, transpose and inverse.
+"""
