@@ -61,8 +61,8 @@ namespace MachineLearning4Water.Python.U.Test
             PythonRunner.RunPythonMethod("BaseLib.py", "MatrixMult", result => solution = PythonHelper.ConvertDynamicToMatrix(result), matrix1, matrix2);
 
             // Solution:
-            // | 6  8  |
-            // | 10 12 |
+            // | 19 22 |
+            // | 43 50 |
             Assert.AreEqual(19, solution[0][0]);
             Assert.AreEqual(22, solution[0][1]);
             Assert.AreEqual(43, solution[1][0]);
