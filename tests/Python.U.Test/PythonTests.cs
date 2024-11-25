@@ -6,6 +6,12 @@ namespace MachineLearning4Water.Python.U.Test
     public class PythonTests
     {
         [TestMethod]
+        public void ExecutePythonEmbeddedScriptSum()
+        {
+            Assert.AreEqual(3, PythonRunner.RunAsEmbeddedPythonMethod("BaseLib.py", "Sum", dyn => int.Parse(dyn.ToString()), 1, 2));
+        }
+
+        [TestMethod]
         public void ExecutePythonScriptSum()
         {
             Assert.AreEqual(3, PythonRunner.RunPythonMethod("BaseLib.py", "Sum", dyn => int.Parse(dyn.ToString()), 1, 2));
