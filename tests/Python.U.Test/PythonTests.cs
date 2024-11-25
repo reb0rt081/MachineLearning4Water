@@ -28,8 +28,7 @@ namespace MachineLearning4Water.Python.U.Test
                 new List<double> { 5, 6 },
                 new List<double> { 7, 8 }
             };
-            List<List<double>> solution = new List<List<double>>();
-            PythonRunner.RunPythonMethod("BaseLib.py", "MatrixSum", result => solution = PythonHelper.ConvertDynamicToMatrix(result), matrix1, matrix2);
+            List<List<double>> solution = PythonRunner.RunPythonMethod("BaseLib.py", "MatrixSum", result => PythonHelper.ConvertDynamicToMatrix(result), matrix1, matrix2);
 
             // Solution:
             // | 6  8  |
@@ -57,8 +56,7 @@ namespace MachineLearning4Water.Python.U.Test
                 new List<double> { 5, 6 },
                 new List<double> { 7, 8 }
             };
-            List<List<double>> solution = new List<List<double>>();
-            PythonRunner.RunPythonMethod("BaseLib.py", "MatrixMult", result => solution = PythonHelper.ConvertDynamicToMatrix(result), matrix1, matrix2);
+            List<List<double>> solution = PythonRunner.RunPythonMethod("BaseLib.py", "MatrixMult", result => PythonHelper.ConvertDynamicToMatrix(result), matrix1, matrix2);
 
             // Solution:
             // | 19 22 |
