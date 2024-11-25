@@ -22,8 +22,8 @@ namespace MachineLearning4Water.Tools
             // Get the Python function
             dynamic pythonFunction = scriptScope.GetVariable(methodName);
 
-            // Call the Python function with arguments
-            dynamic result = pythonFunction(args);
+            // Call the Python function with unpacked arguments
+            dynamic result = engine.Operations.Invoke(pythonFunction, args);
 
             return dataConversionResult((result as object)?.ToString() ?? string.Empty);
         }
