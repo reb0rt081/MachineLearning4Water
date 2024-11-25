@@ -19,4 +19,8 @@
     </EmbeddedResource>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Tools\MachineLearning4Water.Tools.csproj" />
+  </ItemGroup>
+
 </Project>

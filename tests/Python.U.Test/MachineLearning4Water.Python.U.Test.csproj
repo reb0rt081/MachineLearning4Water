@@ -17,7 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\Tools\MachineLearning4Water.Tools.csproj" />
+    <ProjectReference Include="..\..\src\Python\MachineLearning4Water.Python.csproj" />
   </ItemGroup>
 
   <ItemGroup>
