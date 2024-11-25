@@ -46,7 +46,7 @@ on:
 
 jobs:
 
-  build:
+  buildAndTest:
 
     strategy:
       matrix:
