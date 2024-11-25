@@ -6,6 +6,7 @@ namespace MachineLearning4Water.Models.U.Test
         [TestMethod]
         public void TestMethod1()
         {
+            Assert.IsTrue(true);
         }
     }
 }
