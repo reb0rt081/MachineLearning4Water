@@ -3,7 +3,7 @@ def Sum(a, b):
     return a + b
 
 
-def DotProduct(v1: list[float], v2: list[float])->list[float]:
+def DotProduct(v1, v2):
     """
     Returns the dot product of two vectors.
     Raises a ValueError if the vectors have different lengths.
@@ -13,7 +13,7 @@ def DotProduct(v1: list[float], v2: list[float])->list[float]:
     return sum(v1[i] * v2[i] for i in range(len(v1)))
 
 
-def MatrixSum(m1: list[list[float]], m2:list[list[float]])->list[list[float]]:
+def MatrixSum(m1, m2):
     """
     Returns the element-wise sum of two matrices.
     Raises a ValueError if the matrices have different dimensions.
@@ -30,7 +30,7 @@ def MatrixSum(m1: list[list[float]], m2:list[list[float]])->list[list[float]]:
     return result
 
 
-def MatrixMult(m1:list[list[float]], m2: list[list[float]])->list[list[float]]:
+def MatrixMult(m1, m2):
     """
     Returns the product of two matrices.
     Raises a ValueError if the matrices cannot be multiplied.
@@ -50,7 +50,7 @@ def MatrixMult(m1:list[list[float]], m2: list[list[float]])->list[list[float]]:
     return result
 
 
-def determinante(matriz: list[list[float]])->list[list[float]]:
+def determinante(matriz):
     """
     Calcula el determinante de una matriz utilizando la expansión por cofactores.
     """
@@ -75,7 +75,7 @@ def determinante(matriz: list[list[float]])->list[list[float]]:
     
     return det
 
-def transpuesta(matriz:list[list[float]])->list[list[float]]:
+def transpuesta(matriz):
     """
     Calcula la transpuesta de una matriz.
     """
@@ -88,7 +88,7 @@ def transpuesta(matriz:list[list[float]])->list[list[float]]:
         result.append(columna)
     return result
 
-def inversa(matriz:list[list[float]])->list[list[float]]:
+def inversa(matriz):
     """
     Calcula la inversa de una matriz utilizando el determinante y la matriz adjunta.
     """
