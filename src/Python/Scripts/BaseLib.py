@@ -50,84 +50,82 @@ def MatrixMult(m1, m2):
     return result
 
 
-def determinante(matriz):
+def MatrixDeterminant(matrix):
     """
-    Calcula el determinante de una matriz utilizando la expansión por cofactores.
+    Calculates the determinant using the cofactor expansion.
     """
-    # determinante de una matriz 1x1
-    if len(matriz) == 1:
-        return matriz[0][0]
     
-    # determinante de una matriz 2x2
-    if len(matriz) == 2:
-        return matriz[0][0] * matriz[1][1] - matriz[0][1] * matriz[1][0]
+    if len(matrix) == 1:
+        return matrix[0][0]
     
-    # Expansión por cofactores para matrices de mayor tamaño (Submatrices eliminando filas y columnas)
+    
+    if len(matrix) == 2:
+        return matrix[0][0] * matrix[1][1] - matrix[0][1] * matrix[1][0]
+    
+    
     det = 0
-    for col in range(len(matriz)):  # Iteración por columnas
-        # Crear la submatriz al eliminar la primera fila y la columna `col`
-        submatriz = []
-        for fila in matriz[1:]:  # Iteramos por las filas a partir de la segunda
-            submatriz.append(fila[:col] + fila[col+1:])
+    for col in range(len(matrix)):  
+        submatrix=[]
+        for fila in matrix[1:]:  
+            submatrix.append(fila[:col] + fila[col+1:])
         
-        # Sumar o restar según el signo alternante de la posición
-        det += (-1) ** col * matriz[0][col] * determinante(submatriz)  # Llamada recursiva
-    
+        
+        det += (-1) ** col * matrix[0][col] * MatrixDeterminant(submatrix)  
     return det
 
-def transpuesta(matriz):
+def MatrixTranspose(matrix):
     """
-    Calcula la transpuesta de una matriz.
+    calculates the transposed matrix
     """
     
     result = []
-    for i in range(len(matriz[0])):  # Recorremos las columnas
+    for i in range(len(matrix[0])):  
         columna = []
-        for j in range(len(matriz)):  # Recorremos las filas
-            columna.append(matriz[j][i])
+        for j in range(len(matrix)):  
+            columna.append(matrix[j][i])
         result.append(columna)
     return result
 
-def inversa(matriz):
+def MatrixInverse(matrix):
     """
-    Calcula la inversa de una matriz utilizando el determinante y la matriz adjunta.
-    """
-    det = determinante(matriz)
+    calculates the inverse matrix with determinant and transpose matrix functions    """
+    det = MatrixDeterminant(matrix)
     
-    # Si el determinante es 0, la matriz no tiene inversa
+    
     if det == 0:
-        raise ValueError("La matriz no tiene inversa, el determinante es 0")
+        raise ValueError("null determinant")
     
-    # Para una matriz 2x2, la fórmula es sencilla
-    if len(matriz) == 2:
+    
+    if len(matrix) == 2:
         return [
-            [matriz[1][1] / det, -matriz[0][1] / det],
-            [-matriz[1][0] / det, matriz[0][0] / det]
+            [matrix[1][1] / det, -matrix[0][1] / det],
+            [-matrix[1][0] / det, matrix[0][0] / det]
         ]
     
-    # Para matrices de mayor tamaño, calculamos la matriz adjunta
-    adjunta = []
-    for i in range(len(matriz)):  # Iteración por las filas
-        fila_adjacente = []
-        for j in range(len(matriz)):  # Iteración por las columnas
-            # Crear la submatriz eliminando la fila `i` y la columna `j`
-            submatriz = []
-            for k in range(len(matriz)):  # Iteramos por las filas y columnas
-                if k != i:  # Evitar la fila i
-                    fila_submatriz = []
-                    for l in range(len(matriz[k])):  # Iteramos por las columnas
-                        if l != j:  # Evitar la columna j
-                            fila_submatriz.append(matriz[k][l])
-                    submatriz.append(fila_submatriz)
+    
+    adj = []
+    for i in range(len(matrix)):  
+        adj_row = []
+        for j in range(len(matrix)):  
+            
+            
+            submatrix = []
+            for k in range(len(matrix)):  
+                if k != i:  
+                    submatrix_row = []
+                    for l in range(len(matrix[k])):
+                        if l != j:  
+                            submatrix_row.append(matrix[k][l])
+                    submatrix.append(submatrix_row)
             
             # Cofactor
-            cofactor = (-1) ** (i + j) * determinante(submatriz)
-            fila_adjacente.append(cofactor)
-        adjunta.append(fila_adjacente)
+            cofactor = (-1) ** (i + j) * MatrixDeterminant(submatrix)
+            adj_row.append(cofactor)
+        adj.append(adj_row)
     
-    # La matriz inversa es la transpuesta de la adjunta dividida por el determinante
-    adjunta_transpuesta = transpuesta(adjunta)
-    return [[elemento / det for elemento in fila] for fila in adjunta_transpuesta]
+    
+    transpose_adj = MatrixTranspose(adj)
+    return [[element / det for element in row] for row in transpose_adj]
 
 """
     TODO: Define methods matrix determinant, transpose and inverse.
