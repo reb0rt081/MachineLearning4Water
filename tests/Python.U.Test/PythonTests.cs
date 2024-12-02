@@ -72,5 +72,27 @@ namespace MachineLearning4Water.Python.U.Test
             Assert.AreEqual(43, solution[1][0]);
             Assert.AreEqual(50, solution[1][1]);
         }
+
+        [TestMethod]
+        public void ExecutePythonScriptMatrixDeterminant()
+        {
+            // Define the matrices
+            // | 1 2 |
+            // | 3 4 |
+            var matrix1 = new List<List<double>> {
+                new List<double> { 1, 2 },
+                new List<double> { 3, 4 }
+            };
+
+            int solution = PythonRunner.RunPythonMethod("BaseLib.py", "determinante", dyn => int.Parse(dyn.ToString()), matrix1);
+
+            // Solution:
+            // -2
+            Assert.AreEqual(-2, solution);
+
+            //  TODO test with Range 3 and Range 10 matrices
+        }
+
+        //  TODO add a test for each new method: included the ones in MachineLearningTechni
     }
 }
