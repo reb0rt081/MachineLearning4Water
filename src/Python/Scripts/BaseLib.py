@@ -55,22 +55,29 @@ def MatrixDeterminant(matrix):
     Calculates the determinant using the cofactor expansion.
     """
     
-    if len(matrix) == 1:
+    matrixRange = len(matrix)
+    if matrixRange == 1:
         return matrix[0][0]
     
     
-    if len(matrix) == 2:
+    if matrixRange == 2:
         return matrix[0][0] * matrix[1][1] - matrix[0][1] * matrix[1][0]
     
     
     det = 0
-    for col in range(len(matrix)):  
-        submatrix=[]
-        for fila in matrix[1:]:  
-            submatrix.append(fila[:col] + fila[col+1:])
-        
-        
-        det += (-1) ** col * matrix[0][col] * MatrixDeterminant(submatrix)  
+    # Iterate over columns of the first row
+    for col in range(matrixRange):
+        # Construct submatrix explicitly
+        submatrix = []
+        for row in range(1, matrixRange):  # Skip the first row
+            subrow = []
+            for c in range(matrixRange):  # Add only columns that are not `col`
+                if c != col:
+                    subrow.append(matrix[row][c])
+            submatrix.append(subrow)
+
+        # Recursive cofactor expansion
+        det += (-1) ** col * matrix[0][col] * MatrixDeterminant(submatrix)
     return det
 
 def MatrixTranspose(matrix):
