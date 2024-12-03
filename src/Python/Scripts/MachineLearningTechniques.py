@@ -3,9 +3,12 @@ import numpy as np
 import pandas as pd
 from sklearn.cluster import KMeans
 from sklearn.linear_model import LogisticRegression
+from sklearn.svm import SVC
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.metrics import accuracy_score, precision_score, confusion_matrix, mean_squared_error, mean_absolute_error, r2_score
+from sklearn.base import is_classifier
 
-
-
+#Models
 def LinearModel(x, y):
   """returns fit linear model from sklearn"""
   
@@ -92,3 +95,60 @@ def LogisticRegressionParams(x, y, **kwargs):
     model = LogisticRegression(**kwargs)
     model.fit(x, y)
     return model.coef_, model.intercept_
+
+
+def SVCModel (x,y,**kwargs):
+  """Takes x and y as array-like inputs and returns a SVC classifier"""
+
+  model = SVC(**kwargs)
+  model.fit(x,y)
+  
+  return model
+
+
+
+def KNNModel (x,y,**kwargs):
+  """Takes x and y as array-like inputs and outputs a KNN classifier"""
+
+  model=KNeighborsClassifier(**kwargs)
+  model.fit(x,y)
+  return model
+
+#Model Eval
+
+
+
+def evaluate_basic_metrics(model, X_test, y_test):
+    """
+    Evaluates basic metrics of a given model (classifier or regressor).
+    
+    Parameters:
+    - model: Trained model (classifier or regressor)
+    - X_test: Test data (features)
+    - y_test: True labels/values (target)
+    
+    Returns:
+    - Dictionary of basic evaluation metrics
+    """
+    metrics = {}
+
+    # Check if the model is a classifier
+    if is_classifier(model):
+        # Predictions for classification models
+        y_pred = model.predict(X_test)
+        
+        # Basic classification metrics
+        metrics['accuracy'] = accuracy_score(y_test, y_pred)
+        metrics['precision'] = precision_score(y_test, y_pred, average='macro', zero_division=0)
+        metrics['confusion_matrix'] = confusion_matrix(y_test, y_pred)
+    
+    else:
+        # Predictions for regression models
+        y_pred = model.predict(X_test)
+        
+        # Basic regression metrics
+        metrics['mean_squared_error'] = mean_squared_error(y_test, y_pred)
+        metrics['mean_absolute_error'] = mean_absolute_error(y_test, y_pred)
+        metrics['r2_score'] = r2_score(y_test, y_pred)
+    
+    return metrics
