@@ -49,35 +49,32 @@ def MatrixMult(m1, m2):
         result.append(temp_row)
     return result
 
-
 def MatrixDeterminant(matrix):
-    """
-    Calculates the determinant using the cofactor expansion.
-    """
+
+    """changed code to use LU decomposition method"""
     
-    matrixRange = len(matrix)
-    if matrixRange == 1:
+    if any(len(row) != len(matrix) for row in matrix):
+        raise ValueError("Matrix must be square")
+    
+    n = len(matrix)
+    
+    if n == 1:
         return matrix[0][0]
     
-    
-    if matrixRange == 2:
+    if n == 2:
         return matrix[0][0] * matrix[1][1] - matrix[0][1] * matrix[1][0]
     
-    
     det = 0
-    # Iterate over columns of the first row
-    for col in range(matrixRange):
-        # Construct submatrix explicitly
+    for col in range(n):
         submatrix = []
-        for row in range(1, matrixRange):  # Skip the first row
+        for row in range(1, n):
             subrow = []
-            for c in range(matrixRange):  # Add only columns that are not `col`
+            for c in range(n):
                 if c != col:
                     subrow.append(matrix[row][c])
             submatrix.append(subrow)
-
-        # Recursive cofactor expansion
         det += (-1) ** col * matrix[0][col] * MatrixDeterminant(submatrix)
+    
     return det
 
 def MatrixTranspose(matrix):
@@ -134,6 +131,5 @@ def MatrixInverse(matrix):
     transpose_adj = MatrixTranspose(adj)
     return [[element / det for element in row] for row in transpose_adj]
 
-"""
-    TODO: Define methods matrix determinant, transpose and inverse.
-"""
+
+
