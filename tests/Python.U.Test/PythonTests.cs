@@ -128,6 +128,37 @@ namespace MachineLearning4Water.Python.U.Test
             Assert.AreEqual(0, solutionRange10);
         }
 
+        [TestMethod]
+        public void ExecutePythonScriptMatrixInverse()
+        {
+            // Define the 3x3 matrix
+            var matrixRange3 = new List<List<double>>
+            {
+                new List<double> { 2, 1, 1 },
+                new List<double> { 1, 2, 1 },
+                new List<double> { 1, 1, 2 }
+            };
+
+            // Calculate determinant for 3x3 matrix
+            var solutionRange3 = PythonRunner.RunPythonMethod("BaseLib.py", "MatrixInverse",
+                result => PythonHelper.ConvertDynamicToMatrix(result), matrixRange3);
+
+            // Solution:
+            // | 0.75 -0.25 -0.25 |
+            // | -0.25 0.75 -0.25 |
+            // | -0.25 -0.25 0.75 |
+            Assert.AreEqual(0.75, solutionRange3[0][0]);
+            Assert.AreEqual(-0.25, solutionRange3[0][1]);
+            Assert.AreEqual(-0.25, solutionRange3[0][2]);
+            Assert.AreEqual(-0.25, solutionRange3[1][0]);
+            Assert.AreEqual(0.75, solutionRange3[1][1]);
+            Assert.AreEqual(-0.25, solutionRange3[1][2]);
+            Assert.AreEqual(-0.25, solutionRange3[2][0]);
+            Assert.AreEqual(-0.25, solutionRange3[2][1]);
+            Assert.AreEqual(0.75, solutionRange3[2][2]);
+
+        }
+
         //  TODO add a test for each new method: included the ones in MachineLearningTechni
     }
 }
