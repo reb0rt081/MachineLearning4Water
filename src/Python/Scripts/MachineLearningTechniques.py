@@ -2,6 +2,7 @@ from sklearn.linear_model import LinearRegression
 import numpy as np
 import pandas as pd
 from sklearn.cluster import KMeans
+from sklearn.linear_model import LogisticRegression
 
 
 
@@ -58,3 +59,36 @@ def KMeansParams(clusters, x, **kwargs):
     model = KMeans(n_clusters=clusters, **kwargs)
     model.fit(x)
     return model.cluster_centers_, model.labels_, model.inertia_
+
+def LogisticRegressionModel(x, y, **kwargs):
+    """
+    Fits a Logistic Regression model and returns the model itself.
+    
+    Parameters:
+    x (array-like): Feature matrix.
+    y (array-like): Target values.
+    **kwargs: Additional keyword arguments for sklearn's LogisticRegression.
+    
+    Returns:
+    LogisticRegression: The fitted Logistic Regression model.
+    """
+    model = LogisticRegression(**kwargs)
+    model.fit(x, y)
+    return model
+
+
+def LogisticRegressionParams(x, y, **kwargs):
+    """
+    Fits a Logistic Regression model and returns coefficients and intercept.
+    
+    Parameters:
+    x (array-like): Feature matrix.
+    y (array-like): Target values.
+    **kwargs: Additional keyword arguments for sklearn's LogisticRegression.
+    
+    Returns:
+    tuple: (coefficients, intercept)
+    """
+    model = LogisticRegression(**kwargs)
+    model.fit(x, y)
+    return model.coef_, model.intercept_
