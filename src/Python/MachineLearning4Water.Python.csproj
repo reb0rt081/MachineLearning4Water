@@ -15,7 +15,9 @@
     <EmbeddedResource Include="Scripts\BaseLib.py">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
-    <EmbeddedResource Include="Scripts\MachineLearningTechniques.py" />
+    <EmbeddedResource Include="Scripts\MachineLearningTechniques.py">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
     <EmbeddedResource Include="Scripts\script1.py">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
