@@ -72,5 +72,115 @@ namespace MachineLearning4Water.Python.U.Test
             Assert.AreEqual(43, solution[1][0]);
             Assert.AreEqual(50, solution[1][1]);
         }
+
+        [TestMethod]
+        public void ExecutePythonScriptMatrixDeterminant()
+        {
+            // Define the 2x2 matrix
+            var matrixRange2 = new List<List<double>> 
+            {
+                new List<double> { 1, 2 },
+                new List<double> { 3, 4 }
+            };
+
+            // Calculate determinant for 2x2 matrix
+            int solutionRange2 = PythonRunner.RunPythonMethod("BaseLib.py", "MatrixDeterminant",
+                dyn => int.Parse(dyn.ToString()), matrixRange2);
+
+            // Validate the result
+            Assert.AreEqual(-2, solutionRange2);
+
+            // Define the 3x3 matrix
+            var matrixRange3 = new List<List<double>> 
+            {
+                new List<double> { 6, 1, 1 },
+                new List<double> { 4, -2, 5 },
+                new List<double> { 2, 8, 7 }
+            };
+
+            // Calculate determinant for 3x3 matrix
+            int solutionRange3 = PythonRunner.RunPythonMethod("BaseLib.py", "MatrixDeterminant",
+                dyn => int.Parse(dyn.ToString()), matrixRange3);
+
+            // Validate the result
+            Assert.AreEqual(-306, solutionRange3);
+
+            // Define the pre-determined 10x10 matrix
+            var matrixRange10 = new List<List<double>> 
+            {
+                new List<double> { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 },
+                new List<double> { 10, 9, 8, 7, 6, 5, 4, 3, 2, 1 },
+                new List<double> { 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 },
+                new List<double> { 11, 10, 9, 8, 7, 6, 5, 4, 3, 2 },
+                new List<double> { 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 },
+                new List<double> { 12, 11, 10, 9, 8, 7, 6, 5, 4, 3 },
+                new List<double> { 4, 5, 6, 7, 8, 9, 10, 11, 12, 13 },
+                new List<double> { 13, 12, 11, 10, 9, 8, 7, 6, 5, 4 },
+                new List<double> { 5, 6, 7, 8, 9, 10, 11, 12, 13, 14 },
+                new List<double> { 14, 13, 12, 11, 10, 9, 8, 7, 6, 5 }
+            };
+
+            // Calculate determinant for 10x10 matrix
+            int solutionRange10 = PythonRunner.RunPythonMethod("BaseLib.py", "MatrixDeterminant",
+                dyn => int.Parse(dyn.ToString()), matrixRange10);
+
+            // Validate the result (determinant is 0)
+            Assert.AreEqual(0, solutionRange10);
+        }
+
+        [TestMethod]
+        public void ExecutePythonScriptMatrixInverse()
+        {
+            // Define the 3x3 matrix
+            var matrixRange3 = new List<List<double>>
+            {
+                new List<double> { 2, 1, 1 },
+                new List<double> { 1, 2, 1 },
+                new List<double> { 1, 1, 2 }
+            };
+
+            // Calculate determinant for 3x3 matrix
+            var solutionRange3 = PythonRunner.RunPythonMethod("BaseLib.py", "MatrixInverse",
+                result => PythonHelper.ConvertDynamicToMatrix(result), matrixRange3);
+
+            // Solution:
+            // | 0.75 -0.25 -0.25 |
+            // | -0.25 0.75 -0.25 |
+            // | -0.25 -0.25 0.75 |
+            Assert.AreEqual(0.75, solutionRange3[0][0]);
+            Assert.AreEqual(-0.25, solutionRange3[0][1]);
+            Assert.AreEqual(-0.25, solutionRange3[0][2]);
+            Assert.AreEqual(-0.25, solutionRange3[1][0]);
+            Assert.AreEqual(0.75, solutionRange3[1][1]);
+            Assert.AreEqual(-0.25, solutionRange3[1][2]);
+            Assert.AreEqual(-0.25, solutionRange3[2][0]);
+            Assert.AreEqual(-0.25, solutionRange3[2][1]);
+            Assert.AreEqual(0.75, solutionRange3[2][2]);
+
+        }
+
+        [TestMethod]
+        public void ExecutePythonScriptLinearModelParams(){
+           //define vectors of x and y
+            var vectorX = new List<double>();
+            vectorX.Add(0);
+            vectorX.Add(1);
+            vectorX.Add(2);
+            vectorX.Add(3);
+
+            var vectorY = vectorX;
+
+            var solution = PythonRunner.RunPythonMethod("MachineLearningTechniques.py","LinearModelParams",
+                result=>{var tuple=(Tuple<double,double>)result;
+                         return new {slope = tuple.Item1, intercept = tuple.Item2};},
+                         vectorX,vectorY);
+            double slope = solution.slope;
+            double intercept = solution.intercept;
+
+            Assert.AreEqual(1.0,slope);
+            Assert.AreEqual(0.0, intercept);                                  
+            
+
+        }//  TODO add a test for each new method: included the ones in MachineLearningTechni
     }
 }
