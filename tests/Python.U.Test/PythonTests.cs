@@ -159,6 +159,28 @@ namespace MachineLearning4Water.Python.U.Test
 
         }
 
-        //  TODO add a test for each new method: included the ones in MachineLearningTechni
+        [TestMethod]
+        public void ExecutePythonScriptLinearModelParams(){
+           //define vectors of x and y
+            var vectorX = new List<double>();
+            vectorX.Add(0);
+            vectorX.Add(1);
+            vectorX.Add(2);
+            vectorX.Add(3);
+
+            var vectorY = vectorX;
+
+            var solution = PythonRunner.RunPythonMethod("MachineLearningTechniques.py","LinearModelParams",
+                result=>{var tuple=(Tuple<double,double>)result;
+                         return new {slope = tuple.Item1, intercept = tuple.Item2};},
+                         vectorX,vectorY);
+            double slope = solution.slope;
+            double intercept = solution.intercept;
+
+            Assert.AreEqual(1.0,slope);
+            Assert.AreEqual(0.0, intercept);                                  
+            
+
+        }//  TODO add a test for each new method: included the ones in MachineLearningTechni
     }
 }
