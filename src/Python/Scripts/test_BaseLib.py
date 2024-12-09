@@ -1,4 +1,6 @@
-# BaseLib.py
+# Test for module BaseLib.py:
+# - Name of this module starts with test_
+# - Name of the test method starts with test_
 from BaseLib import Sum
 
 def test_Sum():
