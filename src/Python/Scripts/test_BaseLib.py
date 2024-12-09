@@ -1,7 +1,7 @@
 # Test for module BaseLib.py:
 # - Name of this module starts with test_
 # - Name of the test method starts with test_
-import BaseLib as BL
+import BaseLib as BL # changed import
 
 
 def test_Sum():
