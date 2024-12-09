@@ -1,5 +1,5 @@
 # BaseLib.py
-from BaseLib.py import Sum
+from BaseLib import Sum
 
 def test_Sum():
     assert Sum(2, 3) == 5
