@@ -1,5 +1,5 @@
 import MachineLearningTechniques as ML
-
+import numpy as np
 # model tests for libs
 
 def test_LinearModelParams():
