@@ -3,8 +3,10 @@ import MachineLearningTechniques as ML
 # model tests for libs
 
 def test_LinearModelParams():
-  x = [[1],[2],[3],[4]]
-  y= [1,2,3,4]
+  x_nat = [[1],[2],[3],[4]]
+  y_nat= [1,2,3,4]
+  x=np.array(x)
+  y=np.array(y)
   slope,intercept = ML.LinearModelParams(x,y)
   assert slope[0]==1
   assert intercept[0]==0
