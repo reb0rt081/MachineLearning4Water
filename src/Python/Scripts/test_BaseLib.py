@@ -36,3 +36,10 @@ def test_MatrixDeterminant():
     assert BL.MatrixDeterminant(m2) == 1
     assert BL.MatrixDeterminant(m3) == -6154
     
+def test_MatrixTranspose():
+    m = [[1,2],[3,4]]
+    assert BL.MatrixTranspose(m) = [[1,3],[2,4]]
+
+def test_MatrixInverse():
+    m=[[1,2],[3,4]]
+    assert BL.MatrixInverse(m) = [[-2,1],[1.5,-0.5]]
