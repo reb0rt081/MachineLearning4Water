@@ -9,7 +9,7 @@ def test_LinearModelParams():
   y=np.array(y_nat)
   slope,intercept = ML.LinearModelParams(x,y)
   assert slope[0]==1
-  assert intercept[0]==0
+  assert intercept==0
 
 def test_KMeansParams():
   x=[[1],[2],[2],[3],[6],[7],[8],[9]]
