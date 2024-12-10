@@ -38,8 +38,8 @@ def test_MatrixDeterminant():
     
 def test_MatrixTranspose():
     m = [[1,2],[3,4]]
-    assert BL.MatrixTranspose(m) = [[1,3],[2,4]]
+    assert BL.MatrixTranspose(m) == [[1,3],[2,4]]
 
 def test_MatrixInverse():
     m=[[1,2],[3,4]]
-    assert BL.MatrixInverse(m) = [[-2,1],[1.5,-0.5]]
+    assert BL.MatrixInverse(m) == [[-2,1],[1.5,-0.5]]
