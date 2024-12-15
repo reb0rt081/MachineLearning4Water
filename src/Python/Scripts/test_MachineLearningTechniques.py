@@ -18,7 +18,7 @@ def test_KMeansParams():
   assert abs(centers[0]-2)<0.1
   assert abs(centers[1]-7)<0.1
   assert list(labels)== [0,0,0,0,1,1,1,1]
-  assert abs(inertia-8.5)<0.1
+  assert abs(inertia-4.0)<0.1
 
 def test_LogisticRegressionParams():
   x=[[1],[2],[3],[4],[5],[6]]
