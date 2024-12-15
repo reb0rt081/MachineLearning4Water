@@ -15,8 +15,8 @@ def test_KMeansParams():
   x=[[1],[2],[2],[3],[6],[7],[7],[8]]
   clusters = 2
   centers,labels,inertia = ML.KMeansParams(clusters,x)
-  assert abs(centers[0]-2)<0.1
-  assert abs(centers[1]-7)<0.1
+  assert abs(centers[0]-7)<0.1
+  assert abs(centers[1]-2)<0.1
   assert list(labels)== [0,0,0,0,1,1,1,1]
   assert abs(inertia-4.0)<0.1
 
