@@ -118,7 +118,7 @@ def KNNModel (x,y,**kwargs):
 #Model Eval
 
 def RidgeRegressionModel (x,y, alpha, **kwargs):
-  "takes x and y as array like object and outputs a RR model
+  """takes x and y as array like object and outputs a RR model"""
 
   model = Ridge(alpha = alpha, **kwargs)
   model.fit(x,y)
