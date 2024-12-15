@@ -62,7 +62,7 @@ def KMeansParams(clusters, x, **kwargs):
     """
     model = KMeans(n_clusters=clusters, **kwargs)
     model.fit(x)
-    return model.cluster_centers_, model.labels_, model.inertia_
+    return model.cluster_centers_.flatten(), model.labels_, model.inertia_
 
 def LogisticRegressionModel(x, y, **kwargs):
     """
