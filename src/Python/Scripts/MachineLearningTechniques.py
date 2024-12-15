@@ -7,6 +7,7 @@ from sklearn.svm import SVC
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.metrics import accuracy_score, precision_score, confusion_matrix, mean_squared_error, mean_absolute_error, r2_score
 from sklearn.base import is_classifier
+from sklearn.linear_model import Ridge
 
 #Models
 def LinearModel(x, y):
@@ -116,8 +117,13 @@ def KNNModel (x,y,**kwargs):
 
 #Model Eval
 
+def RidgeRegressionModel (x,y, alpha, **kwargs):
+  "takes x and y as array like object and outputs a RR model
 
-
+  model = Ridge(alpha = alpha, **kwargs)
+  model.fit(x,y)
+  return model
+  
 def evaluate_basic_metrics(model, X_test, y_test):
     """
     Evaluates basic metrics of a given model (classifier or regressor).
