@@ -12,13 +12,13 @@ def test_LinearModelParams():
   assert intercept==0
 
 def test_KMeansParams():
-  x=[[1],[2],[2],[3],[6],[7],[8],[9]]
+  x=[[1],[2],[2],[3],[6],[7],[7],[8]]
   clusters = 2
   centers,labels,inertia = ML.KMeansParams(clusters,x)
   assert abs(centers[0]-2)<0.1
-  assert abs(centers[1]-7.5)<0.1
+  assert abs(centers[1]-7)<0.1
   assert list(labels)== [0,0,0,0,1,1,1,1]
-  assert abs(inertia-7)<0.1
+  assert abs(inertia-8.5)<0.1
 
 def test_LogisticRegressionParams():
   x=[[1],[2],[3],[4],[5],[6]]
