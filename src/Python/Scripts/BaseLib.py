@@ -49,6 +49,87 @@ def MatrixMult(m1, m2):
         result.append(temp_row)
     return result
 
-"""
-    TODO: Define methods matrix determinant, transpose and inverse.
-"""
+def MatrixDeterminant(matrix):
+
+    """changed code to use LU decomposition method"""
+    
+    if any(len(row) != len(matrix) for row in matrix):
+        raise ValueError("Matrix must be square")
+    
+    n = len(matrix)
+    
+    if n == 1:
+        return matrix[0][0]
+    
+    if n == 2:
+        return matrix[0][0] * matrix[1][1] - matrix[0][1] * matrix[1][0]
+    
+    det = 0
+    for col in range(n):
+        submatrix = []
+        for row in range(1, n):
+            subrow = []
+            for c in range(n):
+                if c != col:
+                    subrow.append(matrix[row][c])
+            submatrix.append(subrow)
+        det += (-1) ** col * matrix[0][col] * MatrixDeterminant(submatrix)
+    
+    return det
+
+def MatrixTranspose(matrix):
+    """
+    calculates the transposed matrix
+    """
+    
+    result = []
+    for i in range(len(matrix[0])):  
+        columna = []
+        for j in range(len(matrix)):  
+            columna.append(matrix[j][i])
+        result.append(columna)
+    return result
+
+def MatrixInverse(matrix):
+    """
+    calculates the inverse matrix with determinant and transpose matrix functions    """
+    det = MatrixDeterminant(matrix)
+    
+    
+    if det == 0:
+        raise ValueError("null determinant")
+    
+    
+    if len(matrix) == 2:
+        return [
+            [matrix[1][1] / det, -matrix[0][1] / det],
+            [-matrix[1][0] / det, matrix[0][0] / det]
+        ]
+    
+    
+    adj = []
+    for i in range(len(matrix)):  
+        adj_row = []
+        for j in range(len(matrix)):  
+            
+            
+            submatrix = []
+            for k in range(len(matrix)):  
+                if k != i:  
+                    submatrix_row = []
+                    for l in range(len(matrix[k])):
+                        if l != j:  
+                            submatrix_row.append(matrix[k][l])
+                    submatrix.append(submatrix_row)
+            
+            # Cofactor
+            cofactor = (-1) ** (i + j) * MatrixDeterminant(submatrix)
+            adj_row.append(cofactor)
+        adj.append(adj_row)
+    
+    
+    transpose_adj = MatrixTranspose(adj)
+    return [[element / det for element in row] for row in transpose_adj]
+
+
+

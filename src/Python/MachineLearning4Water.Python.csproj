@@ -7,11 +7,15 @@
 
   <ItemGroup>
     <None Remove="Scripts\BaseLib.py" />
+    <None Remove="Scripts\MachineLearningTechniques.py" />
     <None Remove="Scripts\script1.py" />
   </ItemGroup>
 
   <ItemGroup>
     <EmbeddedResource Include="Scripts\BaseLib.py">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scripts\MachineLearningTechniques.py">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="Scripts\script1.py">
