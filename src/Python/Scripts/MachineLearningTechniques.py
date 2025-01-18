@@ -8,7 +8,9 @@ from sklearn.neighbors import KNeighborsClassifier
 from sklearn.metrics import accuracy_score, precision_score, confusion_matrix, mean_squared_error, mean_absolute_error, r2_score
 from sklearn.base import is_classifier
 from sklearn.linear_model import Ridge
+
 from sklearn.neural_network import MLPRegressor
+
 
 #Models
 def LinearModel(x, y):
@@ -162,6 +164,8 @@ def evaluate_basic_metrics(model, X_test, y_test):
     return metrics
 
 
+
 def NeuralNetworkRegressor(x,y,**kwargs):
   model = MLPRegressor(**kwargs).fit(x,y)
   return model
+
