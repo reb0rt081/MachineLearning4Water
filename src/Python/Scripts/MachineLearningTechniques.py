@@ -9,6 +9,9 @@ from sklearn.metrics import accuracy_score, precision_score, confusion_matrix, m
 from sklearn.base import is_classifier
 from sklearn.linear_model import Ridge
 
+from sklearn.neural_network import MLPRegressor
+
+
 #Models
 def LinearModel(x, y):
   """returns fit linear model from sklearn"""
@@ -159,3 +162,10 @@ def evaluate_basic_metrics(model, X_test, y_test):
         metrics['r2_score'] = r2_score(y_test, y_pred)
     
     return metrics
+
+
+
+def NeuralNetworkRegressor(x,y,**kwargs):
+  model = MLPRegressor(**kwargs).fit(x,y)
+  return model
+
