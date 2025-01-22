@@ -92,7 +92,7 @@ namespace MachineLearning4Water_Models
             // Data process configuration with pipeline data transformations
             var pipeline = mlContext.Transforms.ReplaceMissingValues(new []{new InputOutputColumnPair(@"Temperature", @"Temperature"),new InputOutputColumnPair(@"H2O", @"H2O"),new InputOutputColumnPair(@"IN_1S_F", @"IN_1S_F"),new InputOutputColumnPair(@"IN_1S_I", @"IN_1S_I"),new InputOutputColumnPair(@"IN_S_COD", @"IN_S_COD"),new InputOutputColumnPair(@"IN_S_NH", @"IN_S_NH"),new InputOutputColumnPair(@"IN_X_H", @"IN_X_H"),new InputOutputColumnPair(@"IN_X_I", @"IN_X_I"),new InputOutputColumnPair(@"IN_X_S", @"IN_X_S"),new InputOutputColumnPair(@"IN_X_COD", @"IN_X_COD"),new InputOutputColumnPair(@"IN_X_TSS", @"IN_X_TSS")})      
                                     .Append(mlContext.Transforms.Concatenate(@"Features", new []{@"Temperature",@"H2O",@"IN_1S_F",@"IN_1S_I",@"IN_S_COD",@"IN_S_NH",@"IN_X_H",@"IN_X_I",@"IN_X_S",@"IN_X_COD",@"IN_X_TSS"}))      
-                                    .Append(mlContext.Regression.Trainers.FastForest(new FastForestRegressionTrainer.Options(){NumberOfTrees=4,NumberOfLeaves=4,FeatureFraction=1F,LabelColumnName=@"OUT_X_TSS",FeatureColumnName=@"Features"}));
+                                    .Append(mlContext.Regression.Trainers.FastForest(new FastForestRegressionTrainer.Options(){NumberOfTrees=4,NumberOfLeaves=4,FeatureFraction=0.909469F,LabelColumnName=@"OUT_S_COD",FeatureColumnName=@"Features"}));
 
             return pipeline;
         }

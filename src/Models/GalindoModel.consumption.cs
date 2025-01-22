@@ -59,9 +59,9 @@ namespace MachineLearning4Water_Models
             [ColumnName(@"IN_X_TSS")]
             public float IN_X_TSS { get; set; }
 
-            [LoadColumn(20)]
-            [ColumnName(@"OUT_X_TSS")]
-            public float OUT_X_TSS { get; set; }
+            [LoadColumn(21)]
+            [ColumnName(@"OUT_S_COD")]
+            public float OUT_S_COD { get; set; }
 
         }
 
@@ -106,8 +106,8 @@ namespace MachineLearning4Water_Models
             [ColumnName(@"IN_X_TSS")]
             public float IN_X_TSS { get; set; }
 
-            [ColumnName(@"OUT_X_TSS")]
-            public float OUT_X_TSS { get; set; }
+            [ColumnName(@"OUT_S_COD")]
+            public float OUT_S_COD { get; set; }
 
             [ColumnName(@"Features")]
             public float[] Features { get; set; }
