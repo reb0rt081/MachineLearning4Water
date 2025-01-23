@@ -169,3 +169,53 @@ def NeuralNetworkRegressor(x,y,**kwargs):
   model = MLPRegressor(**kwargs).fit(x,y)
   return model
 
+#Metrics and distances
+def mean_absolute_percentage_error(y_true, y_pred):
+    """
+    Calculate the Mean Absolute Percentage Error (MAPE) between two arrays.
+    
+    Parameters:
+    y_true (array-like): Array of true values (must be non-zero)
+    y_pred (array-like): Array of predicted values
+    
+    Returns:
+    float: The mean absolute percentage error (as percentage)
+    
+    Raises:
+    ValueError: If any true value is zero
+    """
+    epsilon = 1e-10
+    y_true = np.array(y_true)
+    y_pred = np.array(y_pred)
+    
+   
+    
+    
+    # Calculate absolute percentage errors
+    absolute_percentage_errors = np.abs((y_true - y_pred) / (y_true + epsilon))
+    
+    # Return mean percentage error (multiplied by 100 to get percentage)
+    return np.mean(absolute_percentage_errors) * 100 
+  
+  def mean_squared_error(y_true, y_pred):
+    """
+    Calculate the Mean Squared Error between two arrays.
+    
+    Parameters:
+    y_true (array-like): Array of true values
+    y_pred (array-like): Array of predicted values
+    
+    Returns:
+    float: The mean squared error
+    """
+    # Convert inputs to NumPy arrays
+    y_true = np.array(y_true)
+    y_pred = np.array(y_pred)
+    
+    # Calculate squared errors
+    squared_errors = (y_true - y_pred) ** 2
+    
+    # Return mean of squared errors
+    return np.mean(squared_errors)
+  
+  
