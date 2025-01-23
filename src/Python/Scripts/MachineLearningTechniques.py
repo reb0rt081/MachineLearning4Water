@@ -197,7 +197,7 @@ def mean_absolute_percentage_error(y_true, y_pred):
     # Return mean percentage error (multiplied by 100 to get percentage)
     return np.mean(absolute_percentage_errors) * 100 
   
-  def mean_squared_error(y_true, y_pred):
+def mean_squared_error(y_true, y_pred):
     """
     Calculate the Mean Squared Error between two arrays.
     
