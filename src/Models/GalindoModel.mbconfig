@@ -1,0 +1,551 @@
+﻿{
+  "Scenario": "Regression",
+  "DataSource": {
+    "Version": 3,
+    "EscapeCharacter": "\"",
+    "ReadMultiLines": false,
+    "KeepDiacritics": false,
+    "KeepPunctuations": false,
+    "AllowQuoting": false,
+    "Type": "TabularFile",
+    "FilePath": "D:\\CURSOS\\GESTIÓ DE PLANTES DE TRACTAMENT\\Material_Alex\\Data\\DATA.csv",
+    "Delimiter": ",",
+    "DecimalMarker": ".",
+    "HasHeader": true,
+    "ColumnProperties": [
+      {
+        "ColumnName": "t",
+        "ColumnPurpose": "Ignore",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 5
+      },
+      {
+        "ColumnName": "Temperature",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 5
+      },
+      {
+        "ColumnName": "H2O",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 5
+      },
+      {
+        "ColumnName": "IN_1S_F",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 5
+      },
+      {
+        "ColumnName": "IN_1S_I",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 5
+      },
+      {
+        "ColumnName": "IN_S_COD",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 5
+      },
+      {
+        "ColumnName": "IN_S_NH",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 5
+      },
+      {
+        "ColumnName": "IN_X_H",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 5
+      },
+      {
+        "ColumnName": "IN_X_I",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 5
+      },
+      {
+        "ColumnName": "IN_X_S",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 5
+      },
+      {
+        "ColumnName": "IN_X_COD",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 5
+      },
+      {
+        "ColumnName": "IN_X_TSS",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 5
+      },
+      {
+        "ColumnName": "OUT_S_I",
+        "ColumnPurpose": "Ignore",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 5
+      },
+      {
+        "ColumnName": "OUT_S_N2",
+        "ColumnPurpose": "Ignore",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 5
+      },
+      {
+        "ColumnName": "OUT_S_NH",
+        "ColumnPurpose": "Ignore",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 5
+      },
+      {
+        "ColumnName": "OUT_S_NO",
+        "ColumnPurpose": "Ignore",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 5
+      },
+      {
+        "ColumnName": "OUT_X_AUT",
+        "ColumnPurpose": "Ignore",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 5
+      },
+      {
+        "ColumnName": "OUT_X_H",
+        "ColumnPurpose": "Ignore",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 5
+      },
+      {
+        "ColumnName": "OUT_X_I",
+        "ColumnPurpose": "Ignore",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 5
+      },
+      {
+        "ColumnName": "OUT_X_S",
+        "ColumnPurpose": "Ignore",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 5
+      },
+      {
+        "ColumnName": "OUT_X_TSS",
+        "ColumnPurpose": "Ignore",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 5
+      },
+      {
+        "ColumnName": "OUT_S_COD",
+        "ColumnPurpose": "Label",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 5
+      },
+      {
+        "ColumnName": "OUT_X_COD",
+        "ColumnPurpose": "Ignore",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 5
+      },
+      {
+        "ColumnName": "OUT_S_F",
+        "ColumnPurpose": "Ignore",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 5
+      }
+    ]
+  },
+  "Environment": {
+    "Type": "LocalCPU",
+    "Version": 1
+  },
+  "RunHistory": {
+    "Version": 3,
+    "Type": "Result",
+    "Trials": [
+      {
+        "Version": 1,
+        "Type": "Trial",
+        "TrainerName": "FastForestRegression",
+        "Score": 0.49579510667195181,
+        "RuntimeInSeconds": 0.196,
+        "Parameter": {
+          "_SCHEMA_": "e0 * e1 * e3",
+          "e0": {
+            "OutputColumnNames": [
+              "Temperature",
+              "H2O",
+              "IN_1S_F",
+              "IN_1S_I",
+              "IN_S_COD",
+              "IN_S_NH",
+              "IN_X_H",
+              "IN_X_I",
+              "IN_X_S",
+              "IN_X_COD",
+              "IN_X_TSS"
+            ],
+            "InputColumnNames": [
+              "Temperature",
+              "H2O",
+              "IN_1S_F",
+              "IN_1S_I",
+              "IN_S_COD",
+              "IN_S_NH",
+              "IN_X_H",
+              "IN_X_I",
+              "IN_X_S",
+              "IN_X_COD",
+              "IN_X_TSS"
+            ]
+          },
+          "e1": {
+            "InputColumnNames": [
+              "Temperature",
+              "H2O",
+              "IN_1S_F",
+              "IN_1S_I",
+              "IN_S_COD",
+              "IN_S_NH",
+              "IN_X_H",
+              "IN_X_I",
+              "IN_X_S",
+              "IN_X_COD",
+              "IN_X_TSS"
+            ],
+            "OutputColumnName": "Features"
+          },
+          "e3": {
+            "NumberOfTrees": 4,
+            "NumberOfLeaves": 4,
+            "FeatureFraction": 0.909469,
+            "LabelColumnName": "OUT_S_COD",
+            "FeatureColumnName": "Features"
+          }
+        }
+      },
+      {
+        "Version": 1,
+        "Type": "Trial",
+        "TrainerName": "FastForestRegression",
+        "Score": 0.49579510667195181,
+        "RuntimeInSeconds": 0.185,
+        "Parameter": {
+          "_SCHEMA_": "e0 * e1 * e3",
+          "e0": {
+            "OutputColumnNames": [
+              "Temperature",
+              "H2O",
+              "IN_1S_F",
+              "IN_1S_I",
+              "IN_S_COD",
+              "IN_S_NH",
+              "IN_X_H",
+              "IN_X_I",
+              "IN_X_S",
+              "IN_X_COD",
+              "IN_X_TSS"
+            ],
+            "InputColumnNames": [
+              "Temperature",
+              "H2O",
+              "IN_1S_F",
+              "IN_1S_I",
+              "IN_S_COD",
+              "IN_S_NH",
+              "IN_X_H",
+              "IN_X_I",
+              "IN_X_S",
+              "IN_X_COD",
+              "IN_X_TSS"
+            ]
+          },
+          "e1": {
+            "InputColumnNames": [
+              "Temperature",
+              "H2O",
+              "IN_1S_F",
+              "IN_1S_I",
+              "IN_S_COD",
+              "IN_S_NH",
+              "IN_X_H",
+              "IN_X_I",
+              "IN_X_S",
+              "IN_X_COD",
+              "IN_X_TSS"
+            ],
+            "OutputColumnName": "Features"
+          },
+          "e3": {
+            "NumberOfTrees": 4,
+            "NumberOfLeaves": 4,
+            "FeatureFraction": 0.9296436,
+            "LabelColumnName": "OUT_S_COD",
+            "FeatureColumnName": "Features"
+          }
+        }
+      },
+      {
+        "Version": 1,
+        "Type": "Trial",
+        "TrainerName": "FastForestRegression",
+        "Score": 0.49199539331668918,
+        "RuntimeInSeconds": 0.182,
+        "Parameter": {
+          "_SCHEMA_": "e0 * e1 * e3",
+          "e0": {
+            "OutputColumnNames": [
+              "Temperature",
+              "H2O",
+              "IN_1S_F",
+              "IN_1S_I",
+              "IN_S_COD",
+              "IN_S_NH",
+              "IN_X_H",
+              "IN_X_I",
+              "IN_X_S",
+              "IN_X_COD",
+              "IN_X_TSS"
+            ],
+            "InputColumnNames": [
+              "Temperature",
+              "H2O",
+              "IN_1S_F",
+              "IN_1S_I",
+              "IN_S_COD",
+              "IN_S_NH",
+              "IN_X_H",
+              "IN_X_I",
+              "IN_X_S",
+              "IN_X_COD",
+              "IN_X_TSS"
+            ]
+          },
+          "e1": {
+            "InputColumnNames": [
+              "Temperature",
+              "H2O",
+              "IN_1S_F",
+              "IN_1S_I",
+              "IN_S_COD",
+              "IN_S_NH",
+              "IN_X_H",
+              "IN_X_I",
+              "IN_X_S",
+              "IN_X_COD",
+              "IN_X_TSS"
+            ],
+            "OutputColumnName": "Features"
+          },
+          "e3": {
+            "NumberOfTrees": 4,
+            "NumberOfLeaves": 4,
+            "FeatureFraction": 0.83549285,
+            "LabelColumnName": "OUT_S_COD",
+            "FeatureColumnName": "Features"
+          }
+        }
+      },
+      {
+        "Version": 1,
+        "Type": "Trial",
+        "TrainerName": "FastForestRegression",
+        "Score": 0.48888360960095911,
+        "RuntimeInSeconds": 0.249,
+        "Parameter": {
+          "_SCHEMA_": "e0 * e1 * e3",
+          "e0": {
+            "OutputColumnNames": [
+              "Temperature",
+              "H2O",
+              "IN_1S_F",
+              "IN_1S_I",
+              "IN_S_COD",
+              "IN_S_NH",
+              "IN_X_H",
+              "IN_X_I",
+              "IN_X_S",
+              "IN_X_COD",
+              "IN_X_TSS"
+            ],
+            "InputColumnNames": [
+              "Temperature",
+              "H2O",
+              "IN_1S_F",
+              "IN_1S_I",
+              "IN_S_COD",
+              "IN_S_NH",
+              "IN_X_H",
+              "IN_X_I",
+              "IN_X_S",
+              "IN_X_COD",
+              "IN_X_TSS"
+            ]
+          },
+          "e1": {
+            "InputColumnNames": [
+              "Temperature",
+              "H2O",
+              "IN_1S_F",
+              "IN_1S_I",
+              "IN_S_COD",
+              "IN_S_NH",
+              "IN_X_H",
+              "IN_X_I",
+              "IN_X_S",
+              "IN_X_COD",
+              "IN_X_TSS"
+            ],
+            "OutputColumnName": "Features"
+          },
+          "e3": {
+            "NumberOfTrees": 12,
+            "NumberOfLeaves": 4,
+            "FeatureFraction": 0.98344517,
+            "LabelColumnName": "OUT_S_COD",
+            "FeatureColumnName": "Features"
+          }
+        }
+      },
+      {
+        "Version": 1,
+        "Type": "Trial",
+        "TrainerName": "FastForestRegression",
+        "Score": 0.48825922181005321,
+        "RuntimeInSeconds": 0.41,
+        "Parameter": {
+          "_SCHEMA_": "e0 * e1 * e3",
+          "e0": {
+            "OutputColumnNames": [
+              "Temperature",
+              "H2O",
+              "IN_1S_F",
+              "IN_1S_I",
+              "IN_S_COD",
+              "IN_S_NH",
+              "IN_X_H",
+              "IN_X_I",
+              "IN_X_S",
+              "IN_X_COD",
+              "IN_X_TSS"
+            ],
+            "InputColumnNames": [
+              "Temperature",
+              "H2O",
+              "IN_1S_F",
+              "IN_1S_I",
+              "IN_S_COD",
+              "IN_S_NH",
+              "IN_X_H",
+              "IN_X_I",
+              "IN_X_S",
+              "IN_X_COD",
+              "IN_X_TSS"
+            ]
+          },
+          "e1": {
+            "InputColumnNames": [
+              "Temperature",
+              "H2O",
+              "IN_1S_F",
+              "IN_1S_I",
+              "IN_S_COD",
+              "IN_S_NH",
+              "IN_X_H",
+              "IN_X_I",
+              "IN_X_S",
+              "IN_X_COD",
+              "IN_X_TSS"
+            ],
+            "OutputColumnName": "Features"
+          },
+          "e3": {
+            "NumberOfTrees": 4,
+            "NumberOfLeaves": 4,
+            "FeatureFraction": 1.0,
+            "LabelColumnName": "OUT_S_COD",
+            "FeatureColumnName": "Features"
+          }
+        }
+      }
+    ],
+    "Estimators": {
+      "e0": "ReplaceMissingValues",
+      "e1": "Concatenate",
+      "e2": "FastTreeRegression",
+      "e3": "FastForestRegression",
+      "e4": "LightGbmRegression",
+      "e5": "LbfgsPoissonRegressionRegression",
+      "e6": "SdcaRegression"
+    },
+    "Schema": "e0 * e1 * (e2 + e3 + e4 + e5 + e6)",
+    "MetricName": "RSquared",
+    "ModelFilePath": "C:\\Users\\rbo\\Documents\\GIT\\MachineLearning4Water\\src\\Models\\GalindoModel.mlnet"
+  },
+  "Type": "TrainingConfig",
+  "Version": 5,
+  "TrainingOption": {
+    "Version": 2,
+    "Subsampling": false,
+    "Type": "RegressionTrainingOption",
+    "TrainingTime": 40,
+    "LabelColumn": "OUT_S_COD",
+    "ValidationOption": {
+      "Version": 0,
+      "Type": "CrossValidationValidationOption",
+      "NumberOfFolds": 5
+    }
+  }
+}
