@@ -217,5 +217,29 @@ def mean_squared_error(y_true, y_pred):
     
     # Return mean of squared errors
     return np.mean(squared_errors)
+
+def make_chunks(x, y, chunk_size):
+    """
+    Splits the lists x and y into chunks of size 'chunk_size'.
+
+    For each index i, it creates a chunk for x by taking elements from x[i] to x[i + chunk_size - 1],
+    and for y by taking elements from y[i + chunk_size] to y[i + 2*chunk_size - 1].
+
+    Assumes that x and y are lists (which may contain n-dimensional vectors).
+    """
+    data_len = len(x)
+    x_chunks = []
+    y_chunks = []
+    
+    # Iterate until the index where a full set of chunks can be extracted
+    for i in range(data_len - 2 * chunk_size):
+        # Create a chunk for x with 'chunk_size' elements starting at index i
+        chunk_x = x[i : i + chunk_size]
+        # Create a corresponding chunk for y starting after the x chunk
+        chunk_y = y[i + chunk_size : i + 2 * chunk_size]
+        x_chunks.append(chunk_x)
+        y_chunks.append(chunk_y)
+    
+    return x_chunks, y_chunks
   
   
