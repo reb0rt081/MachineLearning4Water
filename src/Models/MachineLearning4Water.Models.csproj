@@ -6,10 +6,16 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.ML" Version="4.0.0" />
     <PackageReference Include="Microsoft.ML.FastTree" Version="4.0.0" />
+    <PackageReference Include="Microsoft.ML.LightGbm" Version="3.0.1" />
     <PackageReference Include="Plotly.NET" Version="3.0.1" />
   </ItemGroup>
   <ItemGroup Label="GalindoModel">
     <None Include="GalindoModel.mlnet">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup Label="ConsumHabitatgesModel">
+    <None Include="ConsumHabitatgesModel.mlnet">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
