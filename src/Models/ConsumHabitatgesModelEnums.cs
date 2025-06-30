@@ -2,7 +2,7 @@
 {
     public sealed class ConsumHabitatgesModelEnums
     {
-        public enum TipusHabitatghe
+        public enum TipusHabitatge
         {
             VivendaUnifamiliar,
             Pis
