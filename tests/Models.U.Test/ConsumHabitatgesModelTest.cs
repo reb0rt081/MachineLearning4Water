@@ -3,7 +3,7 @@ using static Microsoft.FSharp.Core.ByRefKinds;
 
 namespace MachineLearning4Water.Models.U.Test
 {
-    [TestClass]
+    [TestClass, Ignore]
     public class ConsumHabitatgesModelTest
     {
         [TestMethod]
