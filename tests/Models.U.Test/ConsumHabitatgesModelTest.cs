@@ -3,7 +3,7 @@ using static Microsoft.FSharp.Core.ByRefKinds;
 
 namespace MachineLearning4Water.Models.U.Test
 {
-    [TestClass, Ignore]
+    [TestClass]
     public class ConsumHabitatgesModelTest
     {
         [TestMethod]
@@ -11,7 +11,6 @@ namespace MachineLearning4Water.Models.U.Test
         {
             var input = new ConsumHabitatgesModel.ModelInput()
             {
-                Codi_postal = 08020,
                 Persones_habitatge = 2,
                 Tipus_habitatge = (float) ConsumHabitatgesModelEnums.TipusHabitatge.Pis,
                 Lavabos_habitatge = 2,
@@ -39,6 +38,7 @@ namespace MachineLearning4Water.Models.U.Test
             };
             var predEngine = ConsumHabitatgesModel.PredictEngine.Value;
             var result = predEngine.Predict(input);
+            Console.WriteLine($"Prediction returns {result.Score} m3/month");
             Assert.IsTrue(result.Score > 0 && result.Score < 100);
         }
     }

@@ -15,10 +15,6 @@ namespace MachineLearning4Water_Models
         #region model input class
         public class ModelInput
         {
-            [LoadColumn(0)]
-            [ColumnName(@"Codi_postal")]
-            public float Codi_postal { get; set; }
-
             [LoadColumn(1)]
             [ColumnName(@"Persones_habitatge")]
             public float Persones_habitatge { get; set; }
@@ -129,9 +125,6 @@ namespace MachineLearning4Water_Models
         #region model output class
         public class ModelOutput
         {
-            [ColumnName(@"Codi_postal")]
-            public float Codi_postal { get; set; }
-
             [ColumnName(@"Persones_habitatge")]
             public float Persones_habitatge { get; set; }
 

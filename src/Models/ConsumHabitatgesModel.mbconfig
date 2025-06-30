@@ -15,7 +15,7 @@
     "ColumnProperties": [
       {
         "ColumnName": "Codi_postal",
-        "ColumnPurpose": "Feature",
+        "ColumnPurpose": "Ignore",
         "ColumnDataFormat": "Single",
         "IsCategorical": true,
         "Type": "Column",
@@ -235,13 +235,12 @@
         "Version": 1,
         "Type": "Trial",
         "TrainerName": "FastTreeRegression",
-        "Score": 0.14875787672822391,
-        "RuntimeInSeconds": 0.209,
+        "Score": 0.14415281661805815,
+        "RuntimeInSeconds": 0.557,
         "Parameter": {
           "_SCHEMA_": "e0 * e1 * e2",
           "e0": {
             "OutputColumnNames": [
-              "Codi_postal",
               "Persones_habitatge",
               "Tipus_habitatge",
               "Lavabos_habitatge",
@@ -268,7 +267,6 @@
               "Estalviaries_aigua"
             ],
             "InputColumnNames": [
-              "Codi_postal",
               "Persones_habitatge",
               "Tipus_habitatge",
               "Lavabos_habitatge",
@@ -297,7 +295,6 @@
           },
           "e1": {
             "InputColumnNames": [
-              "Codi_postal",
               "Persones_habitatge",
               "Tipus_habitatge",
               "Lavabos_habitatge",
@@ -327,11 +324,11 @@
           },
           "e2": {
             "NumberOfLeaves": 4,
-            "MinimumExampleCountPerLeaf": 22,
-            "NumberOfTrees": 6,
-            "MaximumBinCountPerFeature": 249,
-            "FeatureFraction": 0.96737888266978966,
-            "LearningRate": 0.43036893871432974,
+            "MinimumExampleCountPerLeaf": 23,
+            "NumberOfTrees": 4,
+            "MaximumBinCountPerFeature": 283,
+            "FeatureFraction": 0.99323493604447166,
+            "LearningRate": 0.50870124300659136,
             "LabelColumnName": "Consum_mensual_m3",
             "FeatureColumnName": "Features",
             "DiskTranspose": false
@@ -342,13 +339,12 @@
         "Version": 1,
         "Type": "Trial",
         "TrainerName": "FastTreeRegression",
-        "Score": 0.14875237637431113,
-        "RuntimeInSeconds": 0.217,
+        "Score": 0.14375559099577473,
+        "RuntimeInSeconds": 0.63,
         "Parameter": {
           "_SCHEMA_": "e0 * e1 * e2",
           "e0": {
             "OutputColumnNames": [
-              "Codi_postal",
               "Persones_habitatge",
               "Tipus_habitatge",
               "Lavabos_habitatge",
@@ -375,7 +371,6 @@
               "Estalviaries_aigua"
             ],
             "InputColumnNames": [
-              "Codi_postal",
               "Persones_habitatge",
               "Tipus_habitatge",
               "Lavabos_habitatge",
@@ -404,7 +399,6 @@
           },
           "e1": {
             "InputColumnNames": [
-              "Codi_postal",
               "Persones_habitatge",
               "Tipus_habitatge",
               "Lavabos_habitatge",
@@ -434,11 +428,11 @@
           },
           "e2": {
             "NumberOfLeaves": 4,
-            "MinimumExampleCountPerLeaf": 22,
-            "NumberOfTrees": 6,
-            "MaximumBinCountPerFeature": 249,
-            "FeatureFraction": 0.96739318631152782,
-            "LearningRate": 0.43072568340971651,
+            "MinimumExampleCountPerLeaf": 23,
+            "NumberOfTrees": 4,
+            "MaximumBinCountPerFeature": 283,
+            "FeatureFraction": 0.99322221621201057,
+            "LearningRate": 0.509621257333327,
             "LabelColumnName": "Consum_mensual_m3",
             "FeatureColumnName": "Features",
             "DiskTranspose": false
@@ -449,13 +443,12 @@
         "Version": 1,
         "Type": "Trial",
         "TrainerName": "FastTreeRegression",
-        "Score": 0.14651216986564738,
-        "RuntimeInSeconds": 0.202,
+        "Score": 0.143755460136867,
+        "RuntimeInSeconds": 0.591,
         "Parameter": {
           "_SCHEMA_": "e0 * e1 * e2",
           "e0": {
             "OutputColumnNames": [
-              "Codi_postal",
               "Persones_habitatge",
               "Tipus_habitatge",
               "Lavabos_habitatge",
@@ -482,7 +475,6 @@
               "Estalviaries_aigua"
             ],
             "InputColumnNames": [
-              "Codi_postal",
               "Persones_habitatge",
               "Tipus_habitatge",
               "Lavabos_habitatge",
@@ -511,7 +503,6 @@
           },
           "e1": {
             "InputColumnNames": [
-              "Codi_postal",
               "Persones_habitatge",
               "Tipus_habitatge",
               "Lavabos_habitatge",
@@ -541,11 +532,11 @@
           },
           "e2": {
             "NumberOfLeaves": 4,
-            "MinimumExampleCountPerLeaf": 22,
-            "NumberOfTrees": 6,
-            "MaximumBinCountPerFeature": 247,
-            "FeatureFraction": 0.96740796644542537,
-            "LearningRate": 0.4207010156436668,
+            "MinimumExampleCountPerLeaf": 23,
+            "NumberOfTrees": 4,
+            "MaximumBinCountPerFeature": 283,
+            "FeatureFraction": 0.99325422956026654,
+            "LearningRate": 0.51000653776835747,
             "LabelColumnName": "Consum_mensual_m3",
             "FeatureColumnName": "Features",
             "DiskTranspose": false
@@ -556,13 +547,12 @@
         "Version": 1,
         "Type": "Trial",
         "TrainerName": "FastTreeRegression",
-        "Score": 0.14479363732410394,
-        "RuntimeInSeconds": 0.187,
+        "Score": 0.143755289301455,
+        "RuntimeInSeconds": 0.633,
         "Parameter": {
           "_SCHEMA_": "e0 * e1 * e2",
           "e0": {
             "OutputColumnNames": [
-              "Codi_postal",
               "Persones_habitatge",
               "Tipus_habitatge",
               "Lavabos_habitatge",
@@ -589,7 +579,6 @@
               "Estalviaries_aigua"
             ],
             "InputColumnNames": [
-              "Codi_postal",
               "Persones_habitatge",
               "Tipus_habitatge",
               "Lavabos_habitatge",
@@ -618,7 +607,6 @@
           },
           "e1": {
             "InputColumnNames": [
-              "Codi_postal",
               "Persones_habitatge",
               "Tipus_habitatge",
               "Lavabos_habitatge",
@@ -648,11 +636,11 @@
           },
           "e2": {
             "NumberOfLeaves": 4,
-            "MinimumExampleCountPerLeaf": 22,
-            "NumberOfTrees": 6,
-            "MaximumBinCountPerFeature": 249,
-            "FeatureFraction": 0.96714855184113313,
-            "LearningRate": 0.43601106930932065,
+            "MinimumExampleCountPerLeaf": 23,
+            "NumberOfTrees": 4,
+            "MaximumBinCountPerFeature": 283,
+            "FeatureFraction": 0.99308208837771317,
+            "LearningRate": 0.5088702269070321,
             "LabelColumnName": "Consum_mensual_m3",
             "FeatureColumnName": "Features",
             "DiskTranspose": false
@@ -663,13 +651,12 @@
         "Version": 1,
         "Type": "Trial",
         "TrainerName": "FastTreeRegression",
-        "Score": 0.14440668837331705,
-        "RuntimeInSeconds": 0.206,
+        "Score": 0.14375468535168878,
+        "RuntimeInSeconds": 0.565,
         "Parameter": {
           "_SCHEMA_": "e0 * e1 * e2",
           "e0": {
             "OutputColumnNames": [
-              "Codi_postal",
               "Persones_habitatge",
               "Tipus_habitatge",
               "Lavabos_habitatge",
@@ -696,7 +683,6 @@
               "Estalviaries_aigua"
             ],
             "InputColumnNames": [
-              "Codi_postal",
               "Persones_habitatge",
               "Tipus_habitatge",
               "Lavabos_habitatge",
@@ -725,7 +711,6 @@
           },
           "e1": {
             "InputColumnNames": [
-              "Codi_postal",
               "Persones_habitatge",
               "Tipus_habitatge",
               "Lavabos_habitatge",
@@ -755,11 +740,11 @@
           },
           "e2": {
             "NumberOfLeaves": 4,
-            "MinimumExampleCountPerLeaf": 22,
-            "NumberOfTrees": 6,
-            "MaximumBinCountPerFeature": 249,
-            "FeatureFraction": 0.9681156909477151,
-            "LearningRate": 0.4292453290760781,
+            "MinimumExampleCountPerLeaf": 23,
+            "NumberOfTrees": 4,
+            "MaximumBinCountPerFeature": 282,
+            "FeatureFraction": 0.99330507488685194,
+            "LearningRate": 0.51071444125287446,
             "LabelColumnName": "Consum_mensual_m3",
             "FeatureColumnName": "Features",
             "DiskTranspose": false
@@ -786,7 +771,7 @@
     "Version": 2,
     "Subsampling": false,
     "Type": "RegressionTrainingOption",
-    "TrainingTime": 120,
+    "TrainingTime": 600,
     "LabelColumn": "Consum_mensual_m3",
     "ValidationOption": {
       "Version": 0,
