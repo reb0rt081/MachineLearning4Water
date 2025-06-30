@@ -26,7 +26,7 @@ namespace MachineLearning4Water.Models.U.Test
                 Distancia_caldera_dutxa = 15,
                 Temps_aigua_calenta = 40,
                 Clau_pas = 1,
-                Tipus_descàrrega = (float) ConsumHabitatgesModelEnums.TipusDescarrega.DobleDescarrega,
+                Tipus_descarrega = (float) ConsumHabitatgesModelEnums.TipusDescarrega.DobleDescarrega,
                 Cisterna_encastada = 1,
                 Cisterna_entrades = (float) ConsumHabitatgesModelEnums.CisternaEntrades.UnaEntrada,
                 Cisterna_capacitat = 9,

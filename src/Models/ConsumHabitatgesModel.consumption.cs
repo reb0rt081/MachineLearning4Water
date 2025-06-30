@@ -80,8 +80,8 @@ namespace MachineLearning4Water_Models
             public float Clau_pas { get; set; }
 
             [LoadColumn(17)]
-            [ColumnName(@"Tipus_descàrrega")]
-            public float Tipus_descàrrega { get; set; }
+            [ColumnName(@"Tipus_descarrega")]
+            public float Tipus_descarrega { get; set; }
 
             [LoadColumn(18)]
             [ColumnName(@"Cisterna_encastada")]
@@ -173,8 +173,8 @@ namespace MachineLearning4Water_Models
             [ColumnName(@"Clau_pas")]
             public float Clau_pas { get; set; }
 
-            [ColumnName(@"Tipus_descàrrega")]
-            public float Tipus_descàrrega { get; set; }
+            [ColumnName(@"Tipus_descarrega")]
+            public float Tipus_descarrega { get; set; }
 
             [ColumnName(@"Cisterna_encastada")]
             public float Cisterna_encastada { get; set; }
