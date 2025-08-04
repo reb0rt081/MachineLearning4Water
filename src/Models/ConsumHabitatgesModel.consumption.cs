@@ -16,102 +16,114 @@ namespace MachineLearning4Water_Models
         public class ModelInput
         {
             [LoadColumn(1)]
+            [ColumnName(@"Ingres_promig")]
+            public float Ingres_promig { get; set; }
+
+            [LoadColumn(2)]
+            [ColumnName(@"Poblacio_menor16")]
+            public float Poblacio_menor16 { get; set; }
+
+            [LoadColumn(3)]
+            [ColumnName(@"Poblacio_estudis")]
+            public float Poblacio_estudis { get; set; }
+
+            [LoadColumn(4)]
             [ColumnName(@"Persones_habitatge")]
             public float Persones_habitatge { get; set; }
 
-            [LoadColumn(2)]
+            [LoadColumn(5)]
             [ColumnName(@"Tipus_habitatge")]
             public float Tipus_habitatge { get; set; }
 
-            [LoadColumn(3)]
+            [LoadColumn(6)]
             [ColumnName(@"Lavabos_habitatge")]
             public float Lavabos_habitatge { get; set; }
 
-            [LoadColumn(4)]
+            [LoadColumn(7)]
             [ColumnName(@"Rentavaixelles")]
             public float Rentavaixelles { get; set; }
 
-            [LoadColumn(5)]
+            [LoadColumn(8)]
             [ColumnName(@"Us_banyera")]
             public float Us_banyera { get; set; }
 
-            [LoadColumn(6)]
+            [LoadColumn(9)]
             [ColumnName(@"Consum_mensual_m3")]
             public float Consum_mensual_m3 { get; set; }
 
-            [LoadColumn(7)]
+            [LoadColumn(10)]
             [ColumnName(@"Wc_diari")]
             public float Wc_diari { get; set; }
 
-            [LoadColumn(8)]
+            [LoadColumn(11)]
             [ColumnName(@"Dutxes_diari")]
             public float Dutxes_diari { get; set; }
 
-            [LoadColumn(9)]
+            [LoadColumn(12)]
             [ColumnName(@"Tipus_caldera")]
             public float Tipus_caldera { get; set; }
 
-            [LoadColumn(10)]
+            [LoadColumn(13)]
             [ColumnName(@"Instalacio_caldera")]
             public float Instalacio_caldera { get; set; }
 
-            [LoadColumn(11)]
+            [LoadColumn(14)]
             [ColumnName(@"Potencia_caldera")]
             public float Potencia_caldera { get; set; }
 
-            [LoadColumn(12)]
+            [LoadColumn(15)]
             [ColumnName(@"Antiguitat_caldera")]
             public float Antiguitat_caldera { get; set; }
 
-            [LoadColumn(13)]
+            [LoadColumn(16)]
             [ColumnName(@"Caldera_antiga")]
             public float Caldera_antiga { get; set; }
 
-            [LoadColumn(14)]
+            [LoadColumn(17)]
             [ColumnName(@"Distancia_caldera_dutxa")]
             public float Distancia_caldera_dutxa { get; set; }
 
-            [LoadColumn(15)]
+            [LoadColumn(18)]
             [ColumnName(@"Temps_aigua_calenta")]
             public float Temps_aigua_calenta { get; set; }
 
-            [LoadColumn(16)]
+            [LoadColumn(19)]
             [ColumnName(@"Clau_pas")]
             public float Clau_pas { get; set; }
 
-            [LoadColumn(17)]
+            [LoadColumn(20)]
             [ColumnName(@"Tipus_descarrega")]
             public float Tipus_descarrega { get; set; }
 
-            [LoadColumn(18)]
+            [LoadColumn(21)]
             [ColumnName(@"Cisterna_encastada")]
             public float Cisterna_encastada { get; set; }
 
-            [LoadColumn(19)]
+            [LoadColumn(22)]
             [ColumnName(@"Cisterna_entrades")]
             public float Cisterna_entrades { get; set; }
 
-            [LoadColumn(20)]
+            [LoadColumn(23)]
             [ColumnName(@"Cisterna_capacitat")]
             public float Cisterna_capacitat { get; set; }
 
-            [LoadColumn(21)]
+            [LoadColumn(24)]
             [ColumnName(@"Coneixement_sequera")]
             public float Coneixement_sequera { get; set; }
 
-            [LoadColumn(22)]
+            [LoadColumn(25)]
             [ColumnName(@"Seguiment_factura")]
             public float Seguiment_factura { get; set; }
 
-            [LoadColumn(23)]
+            [LoadColumn(26)]
             [ColumnName(@"Llar_concienciara")]
             public float Llar_concienciara { get; set; }
 
-            [LoadColumn(24)]
+            [LoadColumn(27)]
             [ColumnName(@"Estalvies_aigua")]
             public float Estalvies_aigua { get; set; }
 
-            [LoadColumn(25)]
+            [LoadColumn(28)]
             [ColumnName(@"Estalviaries_aigua")]
             public float Estalviaries_aigua { get; set; }
 
@@ -125,6 +137,15 @@ namespace MachineLearning4Water_Models
         #region model output class
         public class ModelOutput
         {
+            [ColumnName(@"Ingres_promig")]
+            public float Ingres_promig { get; set; }
+
+            [ColumnName(@"Poblacio_menor16")]
+            public float Poblacio_menor16 { get; set; }
+
+            [ColumnName(@"Poblacio_estudis")]
+            public float Poblacio_estudis { get; set; }
+
             [ColumnName(@"Persones_habitatge")]
             public float Persones_habitatge { get; set; }
 

@@ -11,6 +11,9 @@ namespace MachineLearning4Water.Models.U.Test
         {
             var input = new ConsumHabitatgesModel.ModelInput()
             {
+                Ingres_promig = 18000,
+                Poblacio_menor16 = 25,
+                Poblacio_estudis = 10,
                 Persones_habitatge = 2,
                 Tipus_habitatge = (float) ConsumHabitatgesModelEnums.TipusHabitatge.Pis,
                 Lavabos_habitatge = 2,
