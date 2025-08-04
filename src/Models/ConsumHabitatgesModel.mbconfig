@@ -8,7 +8,7 @@
     "KeepPunctuations": false,
     "AllowQuoting": false,
     "Type": "TabularFile",
-    "FilePath": "E:\\Informació habitatges_Data.csv",
+    "FilePath": "E:\\Informació habitatges_Data_FULL.csv",
     "Delimiter": ",",
     "DecimalMarker": ".",
     "HasHeader": true,
@@ -16,6 +16,30 @@
       {
         "ColumnName": "Codi_postal",
         "ColumnPurpose": "Ignore",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 5
+      },
+      {
+        "ColumnName": "Ingres_promig",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 5
+      },
+      {
+        "ColumnName": "Poblacio_menor16",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 5
+      },
+      {
+        "ColumnName": "Poblacio_estudis",
+        "ColumnPurpose": "Feature",
         "ColumnDataFormat": "Single",
         "IsCategorical": false,
         "Type": "Column",
@@ -235,12 +259,15 @@
         "Version": 1,
         "Type": "Trial",
         "TrainerName": "FastTreeRegression",
-        "Score": 0.15716839809759742,
-        "RuntimeInSeconds": 0.347,
+        "Score": 0.61470512178322134,
+        "RuntimeInSeconds": 1.788,
         "Parameter": {
           "_SCHEMA_": "e0 * e1 * e2",
           "e0": {
             "OutputColumnNames": [
+              "Ingres_promig",
+              "Poblacio_menor16",
+              "Poblacio_estudis",
               "Persones_habitatge",
               "Tipus_habitatge",
               "Lavabos_habitatge",
@@ -259,6 +286,9 @@
               "Estalvies_aigua"
             ],
             "InputColumnNames": [
+              "Ingres_promig",
+              "Poblacio_menor16",
+              "Poblacio_estudis",
               "Persones_habitatge",
               "Tipus_habitatge",
               "Lavabos_habitatge",
@@ -279,6 +309,9 @@
           },
           "e1": {
             "InputColumnNames": [
+              "Ingres_promig",
+              "Poblacio_menor16",
+              "Poblacio_estudis",
               "Persones_habitatge",
               "Tipus_habitatge",
               "Lavabos_habitatge",
@@ -299,12 +332,12 @@
             "OutputColumnName": "Features"
           },
           "e2": {
-            "NumberOfLeaves": 5,
-            "MinimumExampleCountPerLeaf": 28,
-            "NumberOfTrees": 4,
-            "MaximumBinCountPerFeature": 302,
-            "FeatureFraction": 0.9512948348806477,
-            "LearningRate": 0.6324443804411668,
+            "NumberOfLeaves": 8,
+            "MinimumExampleCountPerLeaf": 7,
+            "NumberOfTrees": 3098,
+            "MaximumBinCountPerFeature": 38,
+            "FeatureFraction": 0.790699163300247,
+            "LearningRate": 0.067441355437461187,
             "LabelColumnName": "Consum_mensual_m3",
             "FeatureColumnName": "Features",
             "DiskTranspose": false
@@ -314,13 +347,16 @@
       {
         "Version": 1,
         "Type": "Trial",
-        "TrainerName": "FastTreeTweedieRegression",
-        "Score": 0.14011842504680325,
-        "RuntimeInSeconds": 0.469,
+        "TrainerName": "FastTreeRegression",
+        "Score": 0.61063095465389716,
+        "RuntimeInSeconds": 1.69,
         "Parameter": {
-          "_SCHEMA_": "e0 * e1 * e5",
+          "_SCHEMA_": "e0 * e1 * e2",
           "e0": {
             "OutputColumnNames": [
+              "Ingres_promig",
+              "Poblacio_menor16",
+              "Poblacio_estudis",
               "Persones_habitatge",
               "Tipus_habitatge",
               "Lavabos_habitatge",
@@ -339,6 +375,9 @@
               "Estalvies_aigua"
             ],
             "InputColumnNames": [
+              "Ingres_promig",
+              "Poblacio_menor16",
+              "Poblacio_estudis",
               "Persones_habitatge",
               "Tipus_habitatge",
               "Lavabos_habitatge",
@@ -359,6 +398,9 @@
           },
           "e1": {
             "InputColumnNames": [
+              "Ingres_promig",
+              "Poblacio_menor16",
+              "Poblacio_estudis",
               "Persones_habitatge",
               "Tipus_habitatge",
               "Lavabos_habitatge",
@@ -378,29 +420,32 @@
             ],
             "OutputColumnName": "Features"
           },
-          "e5": {
+          "e2": {
             "NumberOfLeaves": 8,
-            "MinimumExampleCountPerLeaf": 61,
-            "NumberOfTrees": 11,
-            "MaximumBinCountPerFeature": 449,
-            "FeatureFraction": 0.87813941835744436,
-            "LearningRate": 0.40916660546005118,
+            "MinimumExampleCountPerLeaf": 7,
+            "NumberOfTrees": 3101,
+            "MaximumBinCountPerFeature": 39,
+            "FeatureFraction": 0.79066125095644413,
+            "LearningRate": 0.067405711640204771,
             "LabelColumnName": "Consum_mensual_m3",
             "FeatureColumnName": "Features",
-            "DiskTranspose": true
+            "DiskTranspose": false
           }
         }
       },
       {
         "Version": 1,
         "Type": "Trial",
-        "TrainerName": "FastTreeTweedieRegression",
-        "Score": 0.13873931068243081,
-        "RuntimeInSeconds": 0.313,
+        "TrainerName": "FastTreeRegression",
+        "Score": 0.60571629572643937,
+        "RuntimeInSeconds": 1.674,
         "Parameter": {
-          "_SCHEMA_": "e0 * e1 * e5",
+          "_SCHEMA_": "e0 * e1 * e2",
           "e0": {
             "OutputColumnNames": [
+              "Ingres_promig",
+              "Poblacio_menor16",
+              "Poblacio_estudis",
               "Persones_habitatge",
               "Tipus_habitatge",
               "Lavabos_habitatge",
@@ -419,6 +464,9 @@
               "Estalvies_aigua"
             ],
             "InputColumnNames": [
+              "Ingres_promig",
+              "Poblacio_menor16",
+              "Poblacio_estudis",
               "Persones_habitatge",
               "Tipus_habitatge",
               "Lavabos_habitatge",
@@ -439,6 +487,9 @@
           },
           "e1": {
             "InputColumnNames": [
+              "Ingres_promig",
+              "Poblacio_menor16",
+              "Poblacio_estudis",
               "Persones_habitatge",
               "Tipus_habitatge",
               "Lavabos_habitatge",
@@ -458,29 +509,32 @@
             ],
             "OutputColumnName": "Features"
           },
-          "e5": {
-            "NumberOfLeaves": 9,
-            "MinimumExampleCountPerLeaf": 61,
-            "NumberOfTrees": 11,
-            "MaximumBinCountPerFeature": 450,
-            "FeatureFraction": 0.87830064636930583,
-            "LearningRate": 0.41699024399106144,
+          "e2": {
+            "NumberOfLeaves": 7,
+            "MinimumExampleCountPerLeaf": 7,
+            "NumberOfTrees": 3101,
+            "MaximumBinCountPerFeature": 38,
+            "FeatureFraction": 0.79046891610615644,
+            "LearningRate": 0.067267667860571187,
             "LabelColumnName": "Consum_mensual_m3",
             "FeatureColumnName": "Features",
-            "DiskTranspose": true
+            "DiskTranspose": false
           }
         }
       },
       {
         "Version": 1,
         "Type": "Trial",
-        "TrainerName": "FastTreeTweedieRegression",
-        "Score": 0.13828889173087483,
-        "RuntimeInSeconds": 0.397,
+        "TrainerName": "FastTreeRegression",
+        "Score": 0.5968499843626407,
+        "RuntimeInSeconds": 1.766,
         "Parameter": {
-          "_SCHEMA_": "e0 * e1 * e5",
+          "_SCHEMA_": "e0 * e1 * e2",
           "e0": {
             "OutputColumnNames": [
+              "Ingres_promig",
+              "Poblacio_menor16",
+              "Poblacio_estudis",
               "Persones_habitatge",
               "Tipus_habitatge",
               "Lavabos_habitatge",
@@ -499,6 +553,9 @@
               "Estalvies_aigua"
             ],
             "InputColumnNames": [
+              "Ingres_promig",
+              "Poblacio_menor16",
+              "Poblacio_estudis",
               "Persones_habitatge",
               "Tipus_habitatge",
               "Lavabos_habitatge",
@@ -519,6 +576,9 @@
           },
           "e1": {
             "InputColumnNames": [
+              "Ingres_promig",
+              "Poblacio_menor16",
+              "Poblacio_estudis",
               "Persones_habitatge",
               "Tipus_habitatge",
               "Lavabos_habitatge",
@@ -538,29 +598,32 @@
             ],
             "OutputColumnName": "Features"
           },
-          "e5": {
+          "e2": {
             "NumberOfLeaves": 8,
-            "MinimumExampleCountPerLeaf": 61,
-            "NumberOfTrees": 11,
-            "MaximumBinCountPerFeature": 451,
-            "FeatureFraction": 0.87785292227403289,
-            "LearningRate": 0.42672214578715745,
+            "MinimumExampleCountPerLeaf": 6,
+            "NumberOfTrees": 3101,
+            "MaximumBinCountPerFeature": 38,
+            "FeatureFraction": 0.78994962122475565,
+            "LearningRate": 0.068428653502274811,
             "LabelColumnName": "Consum_mensual_m3",
             "FeatureColumnName": "Features",
-            "DiskTranspose": true
+            "DiskTranspose": false
           }
         }
       },
       {
         "Version": 1,
         "Type": "Trial",
-        "TrainerName": "FastTreeTweedieRegression",
-        "Score": 0.13813623608077324,
-        "RuntimeInSeconds": 0.318,
+        "TrainerName": "FastTreeRegression",
+        "Score": 0.59384085972285161,
+        "RuntimeInSeconds": 1.788,
         "Parameter": {
-          "_SCHEMA_": "e0 * e1 * e5",
+          "_SCHEMA_": "e0 * e1 * e2",
           "e0": {
             "OutputColumnNames": [
+              "Ingres_promig",
+              "Poblacio_menor16",
+              "Poblacio_estudis",
               "Persones_habitatge",
               "Tipus_habitatge",
               "Lavabos_habitatge",
@@ -579,6 +642,9 @@
               "Estalvies_aigua"
             ],
             "InputColumnNames": [
+              "Ingres_promig",
+              "Poblacio_menor16",
+              "Poblacio_estudis",
               "Persones_habitatge",
               "Tipus_habitatge",
               "Lavabos_habitatge",
@@ -599,6 +665,9 @@
           },
           "e1": {
             "InputColumnNames": [
+              "Ingres_promig",
+              "Poblacio_menor16",
+              "Poblacio_estudis",
               "Persones_habitatge",
               "Tipus_habitatge",
               "Lavabos_habitatge",
@@ -618,16 +687,16 @@
             ],
             "OutputColumnName": "Features"
           },
-          "e5": {
-            "NumberOfLeaves": 10,
-            "MinimumExampleCountPerLeaf": 61,
-            "NumberOfTrees": 11,
-            "MaximumBinCountPerFeature": 452,
-            "FeatureFraction": 0.87724622024128029,
-            "LearningRate": 0.41093188922519264,
+          "e2": {
+            "NumberOfLeaves": 8,
+            "MinimumExampleCountPerLeaf": 7,
+            "NumberOfTrees": 3098,
+            "MaximumBinCountPerFeature": 38,
+            "FeatureFraction": 0.790474244924335,
+            "LearningRate": 0.06776868565811206,
             "LabelColumnName": "Consum_mensual_m3",
             "FeatureColumnName": "Features",
-            "DiskTranspose": true
+            "DiskTranspose": false
           }
         }
       }
@@ -651,7 +720,7 @@
     "Subsampling": false,
     "Tuner": "eci-cfo",
     "Type": "RegressionTrainingOption",
-    "TrainingTime": 350,
+    "TrainingTime": 490,
     "OptimizeMetric": "RSquared",
     "LabelColumn": "Consum_mensual_m3",
     "AvailableTrainers": [
