@@ -235,8 +235,8 @@
         "Version": 1,
         "Type": "Trial",
         "TrainerName": "FastTreeRegression",
-        "Score": 0.15039701734271585,
-        "RuntimeInSeconds": 0.346,
+        "Score": 0.15087279459431627,
+        "RuntimeInSeconds": 0.599,
         "Parameter": {
           "_SCHEMA_": "e0 * e1 * e2",
           "e0": {
@@ -323,12 +323,12 @@
             "OutputColumnName": "Features"
           },
           "e2": {
-            "NumberOfLeaves": 5,
-            "MinimumExampleCountPerLeaf": 34,
-            "NumberOfTrees": 8,
-            "MaximumBinCountPerFeature": 130,
-            "FeatureFraction": 0.89872660675746474,
-            "LearningRate": 0.32297541217830028,
+            "NumberOfLeaves": 4,
+            "MinimumExampleCountPerLeaf": 28,
+            "NumberOfTrees": 4,
+            "MaximumBinCountPerFeature": 465,
+            "FeatureFraction": 0.99995967709229772,
+            "LearningRate": 0.52954354524502389,
             "LabelColumnName": "Consum_mensual_m3",
             "FeatureColumnName": "Features",
             "DiskTranspose": false
@@ -339,8 +339,8 @@
         "Version": 1,
         "Type": "Trial",
         "TrainerName": "FastTreeRegression",
-        "Score": 0.15026344364035954,
-        "RuntimeInSeconds": 0.34,
+        "Score": 0.15086876438854832,
+        "RuntimeInSeconds": 0.555,
         "Parameter": {
           "_SCHEMA_": "e0 * e1 * e2",
           "e0": {
@@ -427,12 +427,12 @@
             "OutputColumnName": "Features"
           },
           "e2": {
-            "NumberOfLeaves": 5,
-            "MinimumExampleCountPerLeaf": 34,
-            "NumberOfTrees": 8,
-            "MaximumBinCountPerFeature": 130,
-            "FeatureFraction": 0.89876370794011129,
-            "LearningRate": 0.32113478487664854,
+            "NumberOfLeaves": 4,
+            "MinimumExampleCountPerLeaf": 28,
+            "NumberOfTrees": 4,
+            "MaximumBinCountPerFeature": 465,
+            "FeatureFraction": 0.99999999,
+            "LearningRate": 0.528894504276538,
             "LabelColumnName": "Consum_mensual_m3",
             "FeatureColumnName": "Features",
             "DiskTranspose": false
@@ -443,8 +443,8 @@
         "Version": 1,
         "Type": "Trial",
         "TrainerName": "FastTreeRegression",
-        "Score": 0.14460089013711702,
-        "RuntimeInSeconds": 0.47,
+        "Score": 0.15086360323269146,
+        "RuntimeInSeconds": 0.581,
         "Parameter": {
           "_SCHEMA_": "e0 * e1 * e2",
           "e0": {
@@ -531,12 +531,12 @@
             "OutputColumnName": "Features"
           },
           "e2": {
-            "NumberOfLeaves": 5,
-            "MinimumExampleCountPerLeaf": 34,
-            "NumberOfTrees": 8,
-            "MaximumBinCountPerFeature": 130,
-            "FeatureFraction": 0.89867190715716017,
-            "LearningRate": 0.32367846352645424,
+            "NumberOfLeaves": 4,
+            "MinimumExampleCountPerLeaf": 28,
+            "NumberOfTrees": 4,
+            "MaximumBinCountPerFeature": 464,
+            "FeatureFraction": 0.99992986804713579,
+            "LearningRate": 0.528158208905629,
             "LabelColumnName": "Consum_mensual_m3",
             "FeatureColumnName": "Features",
             "DiskTranspose": false
@@ -547,8 +547,8 @@
         "Version": 1,
         "Type": "Trial",
         "TrainerName": "FastTreeRegression",
-        "Score": 0.14061051065067096,
-        "RuntimeInSeconds": 0.327,
+        "Score": 0.15086283449922239,
+        "RuntimeInSeconds": 0.644,
         "Parameter": {
           "_SCHEMA_": "e0 * e1 * e2",
           "e0": {
@@ -635,12 +635,12 @@
             "OutputColumnName": "Features"
           },
           "e2": {
-            "NumberOfLeaves": 5,
-            "MinimumExampleCountPerLeaf": 34,
-            "NumberOfTrees": 8,
-            "MaximumBinCountPerFeature": 130,
-            "FeatureFraction": 0.89988678978798153,
-            "LearningRate": 0.32337003805209097,
+            "NumberOfLeaves": 4,
+            "MinimumExampleCountPerLeaf": 28,
+            "NumberOfTrees": 4,
+            "MaximumBinCountPerFeature": 465,
+            "FeatureFraction": 0.99998820555017243,
+            "LearningRate": 0.5280540601742012,
             "LabelColumnName": "Consum_mensual_m3",
             "FeatureColumnName": "Features",
             "DiskTranspose": false
@@ -651,8 +651,8 @@
         "Version": 1,
         "Type": "Trial",
         "TrainerName": "FastTreeRegression",
-        "Score": 0.13711014349280887,
-        "RuntimeInSeconds": 0.337,
+        "Score": 0.15085608191675765,
+        "RuntimeInSeconds": 0.57,
         "Parameter": {
           "_SCHEMA_": "e0 * e1 * e2",
           "e0": {
@@ -739,12 +739,12 @@
             "OutputColumnName": "Features"
           },
           "e2": {
-            "NumberOfLeaves": 5,
-            "MinimumExampleCountPerLeaf": 34,
-            "NumberOfTrees": 8,
-            "MaximumBinCountPerFeature": 130,
-            "FeatureFraction": 0.89869997519383871,
-            "LearningRate": 0.32025237306785248,
+            "NumberOfLeaves": 4,
+            "MinimumExampleCountPerLeaf": 28,
+            "NumberOfTrees": 4,
+            "MaximumBinCountPerFeature": 463,
+            "FeatureFraction": 0.99951299544820726,
+            "LearningRate": 0.527217324088881,
             "LabelColumnName": "Consum_mensual_m3",
             "FeatureColumnName": "Features",
             "DiskTranspose": false
@@ -757,11 +757,10 @@
       "e1": "Concatenate",
       "e2": "FastTreeRegression",
       "e3": "FastForestRegression",
-      "e4": "LightGbmRegression",
-      "e5": "LbfgsPoissonRegressionRegression",
-      "e6": "SdcaRegression"
+      "e4": "FastTreeRegression",
+      "e5": "FastTreeTweedieRegression"
     },
-    "Schema": "e0 * e1 * (e2 + e3 + e4 + e5 + e6)",
+    "Schema": "e0 * e1 * (e2 + e3 + e4 + e5)",
     "MetricName": "RSquared",
     "ModelFilePath": "C:\\Users\\rbo\\Documents\\GIT\\MachineLearning4Water\\src\\Models\\ConsumHabitatgesModel.mlnet"
   },
@@ -770,9 +769,16 @@
   "TrainingOption": {
     "Version": 2,
     "Subsampling": false,
+    "Tuner": "eci-cfo",
     "Type": "RegressionTrainingOption",
-    "TrainingTime": 600,
+    "TrainingTime": 350,
+    "OptimizeMetric": "RSquared",
     "LabelColumn": "Consum_mensual_m3",
+    "AvailableTrainers": [
+      "FASTTREE",
+      "FASTTREE-DISKTRANSPOSE",
+      "FASTFOREST"
+    ],
     "ValidationOption": {
       "Version": 0,
       "Type": "CrossValidationValidationOption",
