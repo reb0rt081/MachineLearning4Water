@@ -95,7 +95,7 @@
       },
       {
         "ColumnName": "Instalacio_caldera",
-        "ColumnPurpose": "Feature",
+        "ColumnPurpose": "Ignore",
         "ColumnDataFormat": "Single",
         "IsCategorical": true,
         "Type": "Column",
@@ -103,7 +103,7 @@
       },
       {
         "ColumnName": "Potencia_caldera",
-        "ColumnPurpose": "Feature",
+        "ColumnPurpose": "Ignore",
         "ColumnDataFormat": "Single",
         "IsCategorical": false,
         "Type": "Column",
@@ -143,7 +143,7 @@
       },
       {
         "ColumnName": "Clau_pas",
-        "ColumnPurpose": "Feature",
+        "ColumnPurpose": "Ignore",
         "ColumnDataFormat": "Single",
         "IsCategorical": true,
         "Type": "Column",
@@ -159,7 +159,7 @@
       },
       {
         "ColumnName": "Cisterna_encastada",
-        "ColumnPurpose": "Feature",
+        "ColumnPurpose": "Ignore",
         "ColumnDataFormat": "Single",
         "IsCategorical": true,
         "Type": "Column",
@@ -167,7 +167,7 @@
       },
       {
         "ColumnName": "Cisterna_entrades",
-        "ColumnPurpose": "Feature",
+        "ColumnPurpose": "Ignore",
         "ColumnDataFormat": "Single",
         "IsCategorical": true,
         "Type": "Column",
@@ -183,7 +183,7 @@
       },
       {
         "ColumnName": "Coneixement_sequera",
-        "ColumnPurpose": "Feature",
+        "ColumnPurpose": "Ignore",
         "ColumnDataFormat": "Single",
         "IsCategorical": true,
         "Type": "Column",
@@ -199,7 +199,7 @@
       },
       {
         "ColumnName": "Llar_concienciara",
-        "ColumnPurpose": "Feature",
+        "ColumnPurpose": "Ignore",
         "ColumnDataFormat": "Single",
         "IsCategorical": true,
         "Type": "Column",
@@ -215,7 +215,7 @@
       },
       {
         "ColumnName": "Estalviaries_aigua",
-        "ColumnPurpose": "Feature",
+        "ColumnPurpose": "Ignore",
         "ColumnDataFormat": "Single",
         "IsCategorical": true,
         "Type": "Column",
@@ -235,8 +235,8 @@
         "Version": 1,
         "Type": "Trial",
         "TrainerName": "FastTreeRegression",
-        "Score": 0.15087279459431627,
-        "RuntimeInSeconds": 0.599,
+        "Score": 0.15716839809759742,
+        "RuntimeInSeconds": 0.347,
         "Parameter": {
           "_SCHEMA_": "e0 * e1 * e2",
           "e0": {
@@ -249,22 +249,14 @@
               "Wc_diari",
               "Dutxes_diari",
               "Tipus_caldera",
-              "Instalacio_caldera",
-              "Potencia_caldera",
               "Antiguitat_caldera",
               "Caldera_antiga",
               "Distancia_caldera_dutxa",
               "Temps_aigua_calenta",
-              "Clau_pas",
               "Tipus_descarrega",
-              "Cisterna_encastada",
-              "Cisterna_entrades",
               "Cisterna_capacitat",
-              "Coneixement_sequera",
               "Seguiment_factura",
-              "Llar_concienciara",
-              "Estalvies_aigua",
-              "Estalviaries_aigua"
+              "Estalvies_aigua"
             ],
             "InputColumnNames": [
               "Persones_habitatge",
@@ -275,22 +267,14 @@
               "Wc_diari",
               "Dutxes_diari",
               "Tipus_caldera",
-              "Instalacio_caldera",
-              "Potencia_caldera",
               "Antiguitat_caldera",
               "Caldera_antiga",
               "Distancia_caldera_dutxa",
               "Temps_aigua_calenta",
-              "Clau_pas",
               "Tipus_descarrega",
-              "Cisterna_encastada",
-              "Cisterna_entrades",
               "Cisterna_capacitat",
-              "Coneixement_sequera",
               "Seguiment_factura",
-              "Llar_concienciara",
-              "Estalvies_aigua",
-              "Estalviaries_aigua"
+              "Estalvies_aigua"
             ]
           },
           "e1": {
@@ -303,32 +287,24 @@
               "Wc_diari",
               "Dutxes_diari",
               "Tipus_caldera",
-              "Instalacio_caldera",
-              "Potencia_caldera",
               "Antiguitat_caldera",
               "Caldera_antiga",
               "Distancia_caldera_dutxa",
               "Temps_aigua_calenta",
-              "Clau_pas",
               "Tipus_descarrega",
-              "Cisterna_encastada",
-              "Cisterna_entrades",
               "Cisterna_capacitat",
-              "Coneixement_sequera",
               "Seguiment_factura",
-              "Llar_concienciara",
-              "Estalvies_aigua",
-              "Estalviaries_aigua"
+              "Estalvies_aigua"
             ],
             "OutputColumnName": "Features"
           },
           "e2": {
-            "NumberOfLeaves": 4,
+            "NumberOfLeaves": 5,
             "MinimumExampleCountPerLeaf": 28,
             "NumberOfTrees": 4,
-            "MaximumBinCountPerFeature": 465,
-            "FeatureFraction": 0.99995967709229772,
-            "LearningRate": 0.52954354524502389,
+            "MaximumBinCountPerFeature": 302,
+            "FeatureFraction": 0.9512948348806477,
+            "LearningRate": 0.6324443804411668,
             "LabelColumnName": "Consum_mensual_m3",
             "FeatureColumnName": "Features",
             "DiskTranspose": false
@@ -338,11 +314,11 @@
       {
         "Version": 1,
         "Type": "Trial",
-        "TrainerName": "FastTreeRegression",
-        "Score": 0.15086876438854832,
-        "RuntimeInSeconds": 0.555,
+        "TrainerName": "FastTreeTweedieRegression",
+        "Score": 0.14011842504680325,
+        "RuntimeInSeconds": 0.469,
         "Parameter": {
-          "_SCHEMA_": "e0 * e1 * e2",
+          "_SCHEMA_": "e0 * e1 * e5",
           "e0": {
             "OutputColumnNames": [
               "Persones_habitatge",
@@ -353,22 +329,14 @@
               "Wc_diari",
               "Dutxes_diari",
               "Tipus_caldera",
-              "Instalacio_caldera",
-              "Potencia_caldera",
               "Antiguitat_caldera",
               "Caldera_antiga",
               "Distancia_caldera_dutxa",
               "Temps_aigua_calenta",
-              "Clau_pas",
               "Tipus_descarrega",
-              "Cisterna_encastada",
-              "Cisterna_entrades",
               "Cisterna_capacitat",
-              "Coneixement_sequera",
               "Seguiment_factura",
-              "Llar_concienciara",
-              "Estalvies_aigua",
-              "Estalviaries_aigua"
+              "Estalvies_aigua"
             ],
             "InputColumnNames": [
               "Persones_habitatge",
@@ -379,22 +347,14 @@
               "Wc_diari",
               "Dutxes_diari",
               "Tipus_caldera",
-              "Instalacio_caldera",
-              "Potencia_caldera",
               "Antiguitat_caldera",
               "Caldera_antiga",
               "Distancia_caldera_dutxa",
               "Temps_aigua_calenta",
-              "Clau_pas",
               "Tipus_descarrega",
-              "Cisterna_encastada",
-              "Cisterna_entrades",
               "Cisterna_capacitat",
-              "Coneixement_sequera",
               "Seguiment_factura",
-              "Llar_concienciara",
-              "Estalvies_aigua",
-              "Estalviaries_aigua"
+              "Estalvies_aigua"
             ]
           },
           "e1": {
@@ -407,46 +367,38 @@
               "Wc_diari",
               "Dutxes_diari",
               "Tipus_caldera",
-              "Instalacio_caldera",
-              "Potencia_caldera",
               "Antiguitat_caldera",
               "Caldera_antiga",
               "Distancia_caldera_dutxa",
               "Temps_aigua_calenta",
-              "Clau_pas",
               "Tipus_descarrega",
-              "Cisterna_encastada",
-              "Cisterna_entrades",
               "Cisterna_capacitat",
-              "Coneixement_sequera",
               "Seguiment_factura",
-              "Llar_concienciara",
-              "Estalvies_aigua",
-              "Estalviaries_aigua"
+              "Estalvies_aigua"
             ],
             "OutputColumnName": "Features"
           },
-          "e2": {
-            "NumberOfLeaves": 4,
-            "MinimumExampleCountPerLeaf": 28,
-            "NumberOfTrees": 4,
-            "MaximumBinCountPerFeature": 465,
-            "FeatureFraction": 0.99999999,
-            "LearningRate": 0.528894504276538,
+          "e5": {
+            "NumberOfLeaves": 8,
+            "MinimumExampleCountPerLeaf": 61,
+            "NumberOfTrees": 11,
+            "MaximumBinCountPerFeature": 449,
+            "FeatureFraction": 0.87813941835744436,
+            "LearningRate": 0.40916660546005118,
             "LabelColumnName": "Consum_mensual_m3",
             "FeatureColumnName": "Features",
-            "DiskTranspose": false
+            "DiskTranspose": true
           }
         }
       },
       {
         "Version": 1,
         "Type": "Trial",
-        "TrainerName": "FastTreeRegression",
-        "Score": 0.15086360323269146,
-        "RuntimeInSeconds": 0.581,
+        "TrainerName": "FastTreeTweedieRegression",
+        "Score": 0.13873931068243081,
+        "RuntimeInSeconds": 0.313,
         "Parameter": {
-          "_SCHEMA_": "e0 * e1 * e2",
+          "_SCHEMA_": "e0 * e1 * e5",
           "e0": {
             "OutputColumnNames": [
               "Persones_habitatge",
@@ -457,22 +409,14 @@
               "Wc_diari",
               "Dutxes_diari",
               "Tipus_caldera",
-              "Instalacio_caldera",
-              "Potencia_caldera",
               "Antiguitat_caldera",
               "Caldera_antiga",
               "Distancia_caldera_dutxa",
               "Temps_aigua_calenta",
-              "Clau_pas",
               "Tipus_descarrega",
-              "Cisterna_encastada",
-              "Cisterna_entrades",
               "Cisterna_capacitat",
-              "Coneixement_sequera",
               "Seguiment_factura",
-              "Llar_concienciara",
-              "Estalvies_aigua",
-              "Estalviaries_aigua"
+              "Estalvies_aigua"
             ],
             "InputColumnNames": [
               "Persones_habitatge",
@@ -483,22 +427,14 @@
               "Wc_diari",
               "Dutxes_diari",
               "Tipus_caldera",
-              "Instalacio_caldera",
-              "Potencia_caldera",
               "Antiguitat_caldera",
               "Caldera_antiga",
               "Distancia_caldera_dutxa",
               "Temps_aigua_calenta",
-              "Clau_pas",
               "Tipus_descarrega",
-              "Cisterna_encastada",
-              "Cisterna_entrades",
               "Cisterna_capacitat",
-              "Coneixement_sequera",
               "Seguiment_factura",
-              "Llar_concienciara",
-              "Estalvies_aigua",
-              "Estalviaries_aigua"
+              "Estalvies_aigua"
             ]
           },
           "e1": {
@@ -511,46 +447,38 @@
               "Wc_diari",
               "Dutxes_diari",
               "Tipus_caldera",
-              "Instalacio_caldera",
-              "Potencia_caldera",
               "Antiguitat_caldera",
               "Caldera_antiga",
               "Distancia_caldera_dutxa",
               "Temps_aigua_calenta",
-              "Clau_pas",
               "Tipus_descarrega",
-              "Cisterna_encastada",
-              "Cisterna_entrades",
               "Cisterna_capacitat",
-              "Coneixement_sequera",
               "Seguiment_factura",
-              "Llar_concienciara",
-              "Estalvies_aigua",
-              "Estalviaries_aigua"
+              "Estalvies_aigua"
             ],
             "OutputColumnName": "Features"
           },
-          "e2": {
-            "NumberOfLeaves": 4,
-            "MinimumExampleCountPerLeaf": 28,
-            "NumberOfTrees": 4,
-            "MaximumBinCountPerFeature": 464,
-            "FeatureFraction": 0.99992986804713579,
-            "LearningRate": 0.528158208905629,
+          "e5": {
+            "NumberOfLeaves": 9,
+            "MinimumExampleCountPerLeaf": 61,
+            "NumberOfTrees": 11,
+            "MaximumBinCountPerFeature": 450,
+            "FeatureFraction": 0.87830064636930583,
+            "LearningRate": 0.41699024399106144,
             "LabelColumnName": "Consum_mensual_m3",
             "FeatureColumnName": "Features",
-            "DiskTranspose": false
+            "DiskTranspose": true
           }
         }
       },
       {
         "Version": 1,
         "Type": "Trial",
-        "TrainerName": "FastTreeRegression",
-        "Score": 0.15086283449922239,
-        "RuntimeInSeconds": 0.644,
+        "TrainerName": "FastTreeTweedieRegression",
+        "Score": 0.13828889173087483,
+        "RuntimeInSeconds": 0.397,
         "Parameter": {
-          "_SCHEMA_": "e0 * e1 * e2",
+          "_SCHEMA_": "e0 * e1 * e5",
           "e0": {
             "OutputColumnNames": [
               "Persones_habitatge",
@@ -561,22 +489,14 @@
               "Wc_diari",
               "Dutxes_diari",
               "Tipus_caldera",
-              "Instalacio_caldera",
-              "Potencia_caldera",
               "Antiguitat_caldera",
               "Caldera_antiga",
               "Distancia_caldera_dutxa",
               "Temps_aigua_calenta",
-              "Clau_pas",
               "Tipus_descarrega",
-              "Cisterna_encastada",
-              "Cisterna_entrades",
               "Cisterna_capacitat",
-              "Coneixement_sequera",
               "Seguiment_factura",
-              "Llar_concienciara",
-              "Estalvies_aigua",
-              "Estalviaries_aigua"
+              "Estalvies_aigua"
             ],
             "InputColumnNames": [
               "Persones_habitatge",
@@ -587,22 +507,14 @@
               "Wc_diari",
               "Dutxes_diari",
               "Tipus_caldera",
-              "Instalacio_caldera",
-              "Potencia_caldera",
               "Antiguitat_caldera",
               "Caldera_antiga",
               "Distancia_caldera_dutxa",
               "Temps_aigua_calenta",
-              "Clau_pas",
               "Tipus_descarrega",
-              "Cisterna_encastada",
-              "Cisterna_entrades",
               "Cisterna_capacitat",
-              "Coneixement_sequera",
               "Seguiment_factura",
-              "Llar_concienciara",
-              "Estalvies_aigua",
-              "Estalviaries_aigua"
+              "Estalvies_aigua"
             ]
           },
           "e1": {
@@ -615,46 +527,38 @@
               "Wc_diari",
               "Dutxes_diari",
               "Tipus_caldera",
-              "Instalacio_caldera",
-              "Potencia_caldera",
               "Antiguitat_caldera",
               "Caldera_antiga",
               "Distancia_caldera_dutxa",
               "Temps_aigua_calenta",
-              "Clau_pas",
               "Tipus_descarrega",
-              "Cisterna_encastada",
-              "Cisterna_entrades",
               "Cisterna_capacitat",
-              "Coneixement_sequera",
               "Seguiment_factura",
-              "Llar_concienciara",
-              "Estalvies_aigua",
-              "Estalviaries_aigua"
+              "Estalvies_aigua"
             ],
             "OutputColumnName": "Features"
           },
-          "e2": {
-            "NumberOfLeaves": 4,
-            "MinimumExampleCountPerLeaf": 28,
-            "NumberOfTrees": 4,
-            "MaximumBinCountPerFeature": 465,
-            "FeatureFraction": 0.99998820555017243,
-            "LearningRate": 0.5280540601742012,
+          "e5": {
+            "NumberOfLeaves": 8,
+            "MinimumExampleCountPerLeaf": 61,
+            "NumberOfTrees": 11,
+            "MaximumBinCountPerFeature": 451,
+            "FeatureFraction": 0.87785292227403289,
+            "LearningRate": 0.42672214578715745,
             "LabelColumnName": "Consum_mensual_m3",
             "FeatureColumnName": "Features",
-            "DiskTranspose": false
+            "DiskTranspose": true
           }
         }
       },
       {
         "Version": 1,
         "Type": "Trial",
-        "TrainerName": "FastTreeRegression",
-        "Score": 0.15085608191675765,
-        "RuntimeInSeconds": 0.57,
+        "TrainerName": "FastTreeTweedieRegression",
+        "Score": 0.13813623608077324,
+        "RuntimeInSeconds": 0.318,
         "Parameter": {
-          "_SCHEMA_": "e0 * e1 * e2",
+          "_SCHEMA_": "e0 * e1 * e5",
           "e0": {
             "OutputColumnNames": [
               "Persones_habitatge",
@@ -665,22 +569,14 @@
               "Wc_diari",
               "Dutxes_diari",
               "Tipus_caldera",
-              "Instalacio_caldera",
-              "Potencia_caldera",
               "Antiguitat_caldera",
               "Caldera_antiga",
               "Distancia_caldera_dutxa",
               "Temps_aigua_calenta",
-              "Clau_pas",
               "Tipus_descarrega",
-              "Cisterna_encastada",
-              "Cisterna_entrades",
               "Cisterna_capacitat",
-              "Coneixement_sequera",
               "Seguiment_factura",
-              "Llar_concienciara",
-              "Estalvies_aigua",
-              "Estalviaries_aigua"
+              "Estalvies_aigua"
             ],
             "InputColumnNames": [
               "Persones_habitatge",
@@ -691,22 +587,14 @@
               "Wc_diari",
               "Dutxes_diari",
               "Tipus_caldera",
-              "Instalacio_caldera",
-              "Potencia_caldera",
               "Antiguitat_caldera",
               "Caldera_antiga",
               "Distancia_caldera_dutxa",
               "Temps_aigua_calenta",
-              "Clau_pas",
               "Tipus_descarrega",
-              "Cisterna_encastada",
-              "Cisterna_entrades",
               "Cisterna_capacitat",
-              "Coneixement_sequera",
               "Seguiment_factura",
-              "Llar_concienciara",
-              "Estalvies_aigua",
-              "Estalviaries_aigua"
+              "Estalvies_aigua"
             ]
           },
           "e1": {
@@ -719,35 +607,27 @@
               "Wc_diari",
               "Dutxes_diari",
               "Tipus_caldera",
-              "Instalacio_caldera",
-              "Potencia_caldera",
               "Antiguitat_caldera",
               "Caldera_antiga",
               "Distancia_caldera_dutxa",
               "Temps_aigua_calenta",
-              "Clau_pas",
               "Tipus_descarrega",
-              "Cisterna_encastada",
-              "Cisterna_entrades",
               "Cisterna_capacitat",
-              "Coneixement_sequera",
               "Seguiment_factura",
-              "Llar_concienciara",
-              "Estalvies_aigua",
-              "Estalviaries_aigua"
+              "Estalvies_aigua"
             ],
             "OutputColumnName": "Features"
           },
-          "e2": {
-            "NumberOfLeaves": 4,
-            "MinimumExampleCountPerLeaf": 28,
-            "NumberOfTrees": 4,
-            "MaximumBinCountPerFeature": 463,
-            "FeatureFraction": 0.99951299544820726,
-            "LearningRate": 0.527217324088881,
+          "e5": {
+            "NumberOfLeaves": 10,
+            "MinimumExampleCountPerLeaf": 61,
+            "NumberOfTrees": 11,
+            "MaximumBinCountPerFeature": 452,
+            "FeatureFraction": 0.87724622024128029,
+            "LearningRate": 0.41093188922519264,
             "LabelColumnName": "Consum_mensual_m3",
             "FeatureColumnName": "Features",
-            "DiskTranspose": false
+            "DiskTranspose": true
           }
         }
       }

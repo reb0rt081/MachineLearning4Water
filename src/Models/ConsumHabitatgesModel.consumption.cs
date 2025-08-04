@@ -51,14 +51,6 @@ namespace MachineLearning4Water_Models
             [ColumnName(@"Tipus_caldera")]
             public float Tipus_caldera { get; set; }
 
-            [LoadColumn(10)]
-            [ColumnName(@"Instalacio_caldera")]
-            public float Instalacio_caldera { get; set; }
-
-            [LoadColumn(11)]
-            [ColumnName(@"Potencia_caldera")]
-            public float Potencia_caldera { get; set; }
-
             [LoadColumn(12)]
             [ColumnName(@"Antiguitat_caldera")]
             public float Antiguitat_caldera { get; set; }
@@ -75,45 +67,21 @@ namespace MachineLearning4Water_Models
             [ColumnName(@"Temps_aigua_calenta")]
             public float Temps_aigua_calenta { get; set; }
 
-            [LoadColumn(16)]
-            [ColumnName(@"Clau_pas")]
-            public float Clau_pas { get; set; }
-
             [LoadColumn(17)]
             [ColumnName(@"Tipus_descarrega")]
             public float Tipus_descarrega { get; set; }
-
-            [LoadColumn(18)]
-            [ColumnName(@"Cisterna_encastada")]
-            public float Cisterna_encastada { get; set; }
-
-            [LoadColumn(19)]
-            [ColumnName(@"Cisterna_entrades")]
-            public float Cisterna_entrades { get; set; }
 
             [LoadColumn(20)]
             [ColumnName(@"Cisterna_capacitat")]
             public float Cisterna_capacitat { get; set; }
 
-            [LoadColumn(21)]
-            [ColumnName(@"Coneixement_sequera")]
-            public float Coneixement_sequera { get; set; }
-
             [LoadColumn(22)]
             [ColumnName(@"Seguiment_factura")]
             public float Seguiment_factura { get; set; }
 
-            [LoadColumn(23)]
-            [ColumnName(@"Llar_concienciara")]
-            public float Llar_concienciara { get; set; }
-
             [LoadColumn(24)]
             [ColumnName(@"Estalvies_aigua")]
             public float Estalvies_aigua { get; set; }
-
-            [LoadColumn(25)]
-            [ColumnName(@"Estalviaries_aigua")]
-            public float Estalviaries_aigua { get; set; }
 
         }
 
@@ -152,12 +120,6 @@ namespace MachineLearning4Water_Models
             [ColumnName(@"Tipus_caldera")]
             public float Tipus_caldera { get; set; }
 
-            [ColumnName(@"Instalacio_caldera")]
-            public float Instalacio_caldera { get; set; }
-
-            [ColumnName(@"Potencia_caldera")]
-            public float Potencia_caldera { get; set; }
-
             [ColumnName(@"Antiguitat_caldera")]
             public float Antiguitat_caldera { get; set; }
 
@@ -170,35 +132,17 @@ namespace MachineLearning4Water_Models
             [ColumnName(@"Temps_aigua_calenta")]
             public float Temps_aigua_calenta { get; set; }
 
-            [ColumnName(@"Clau_pas")]
-            public float Clau_pas { get; set; }
-
             [ColumnName(@"Tipus_descarrega")]
             public float Tipus_descarrega { get; set; }
-
-            [ColumnName(@"Cisterna_encastada")]
-            public float Cisterna_encastada { get; set; }
-
-            [ColumnName(@"Cisterna_entrades")]
-            public float Cisterna_entrades { get; set; }
 
             [ColumnName(@"Cisterna_capacitat")]
             public float Cisterna_capacitat { get; set; }
 
-            [ColumnName(@"Coneixement_sequera")]
-            public float Coneixement_sequera { get; set; }
-
             [ColumnName(@"Seguiment_factura")]
             public float Seguiment_factura { get; set; }
 
-            [ColumnName(@"Llar_concienciara")]
-            public float Llar_concienciara { get; set; }
-
             [ColumnName(@"Estalvies_aigua")]
             public float Estalvies_aigua { get; set; }
-
-            [ColumnName(@"Estalviaries_aigua")]
-            public float Estalviaries_aigua { get; set; }
 
             [ColumnName(@"Features")]
             public float[] Features { get; set; }
