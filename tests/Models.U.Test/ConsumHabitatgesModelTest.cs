@@ -108,9 +108,13 @@ namespace MachineLearning4Water.Models.U.Test
 
             using (var streamWriter = new StreamWriter(outputFileOath))
             {
+                var header = "Actual_value,Predicted_value";
+                streamWriter.WriteLine(header);
+                streamWriter.Flush();
+
                 foreach (var result in results)
                 {
-                    var line = $"{result.Item1},{result.Item2}";
+                    var line = $"{result.Item1.ToString(CultureInfo.InvariantCulture)},{result.Item2.ToString(CultureInfo.InvariantCulture)}";
                     streamWriter.WriteLine(line);
                     streamWriter.Flush();
                 }
@@ -124,7 +128,7 @@ namespace MachineLearning4Water.Models.U.Test
                 return 0;
             }
 
-            return float.Parse(columnValue);
+            return float.Parse(columnValue, CultureInfo.InvariantCulture);
         }
     }
 }
