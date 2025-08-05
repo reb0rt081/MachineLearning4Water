@@ -78,22 +78,22 @@ namespace MachineLearning4Water.Models.U.Test
                         Wc_diari = TryParseColumn(splits[7]),
                         Dutxes_diari = TryParseColumn(splits[8]),
                         Tipus_caldera = TryParseColumn(splits[9]),
-                        Instalacio_caldera = TryParseColumn(splits[10]),
-                        Potencia_caldera = TryParseColumn(splits[11]),
+                        //Instalacio_caldera = TryParseColumn(splits[10]),
+                        //Potencia_caldera = TryParseColumn(splits[11]),
                         Antiguitat_caldera = TryParseColumn(splits[12]),
                         Caldera_antiga = TryParseColumn(splits[13]),
                         Distancia_caldera_dutxa = TryParseColumn(splits[14]),
                         Temps_aigua_calenta = TryParseColumn(splits[15]),
-                        Clau_pas = TryParseColumn(splits[16]),
+                        //Clau_pas = TryParseColumn(splits[16]),
                         Tipus_descarrega = TryParseColumn(splits[17]),
-                        Cisterna_encastada = TryParseColumn(splits[18]),
-                        Cisterna_entrades = TryParseColumn(splits[19]),
+                        //Cisterna_encastada = TryParseColumn(splits[18]),
+                        //Cisterna_entrades = TryParseColumn(splits[19]),
                         Cisterna_capacitat = TryParseColumn(splits[20]),
-                        Coneixement_sequera = TryParseColumn(splits[21]),
+                        //Coneixement_sequera = TryParseColumn(splits[21]),
                         Seguiment_factura = TryParseColumn(splits[22]),
-                        Llar_concienciara = TryParseColumn(splits[23]),
+                        //Llar_concienciara = TryParseColumn(splits[23]),
                         Estalvies_aigua = TryParseColumn(splits[24]),
-                        Estalviaries_aigua = TryParseColumn(splits[25])
+                        //Estalviaries_aigua = TryParseColumn(splits[25])
                     }, TryParseColumn(splits[6]));
                 }
             }
