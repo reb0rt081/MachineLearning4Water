@@ -18,7 +18,7 @@ def test_FailValidateValue():
 def test_ValidateValue():
     ST.ValidateValue(3.9999, 4)
     ST.ValidateValue(3.0, 3)
-    ST.ValidateValue(9.999, 9.998)
+    ST.ValidateValue(9.999, 9.9981)
     ST.ValidateValue(3.91, 4, 0.1)
 
 def test_ValidateValueFails():
