@@ -12,7 +12,7 @@ def ValidateValue(actual, expected, tolerance=0.001):
     """
     if abs(actual - expected) >= tolerance:
         message = (
-            f"Expected {expected!r} ± {tolerance}, but got {actual!r} "
+            f"Expected {expected!r} (tolerance {tolerance}), but got {actual!r} "
             f"(difference={abs(actual - expected)!r})"
         )
         raise AssertionError(message)
