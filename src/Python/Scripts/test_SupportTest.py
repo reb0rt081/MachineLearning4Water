@@ -15,6 +15,19 @@ def test_FailValidateValue():
     else:
         raise AssertionError("Expected failure for value mismatch")
 
+def test_ValidateValue():
+    ST.ValidateValue(3.9999, 4)
+    ST.ValidateValue(3.0, 3)
+    ST.ValidateValue(9.999, 9.998)
+    ST.ValidateValue(3.91, 4, 0.1)
+
+def test_ValidateValueFails():
+    try:
+        ST.ValidateValue(3.9, 4)
+    except AssertionError:
+        pass
+    else:
+        raise AssertionError("Expected failure for value mismatch")
 
 def test_FailValidateString():
     try:
