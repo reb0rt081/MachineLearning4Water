@@ -97,3 +97,23 @@ def test_ValidateVector():
     v1 = [1,0]
     v2 = [1,0]
     ST.ValidateMatrix(v1, v2)
+
+def test_FailValidateMatrix():
+    try:
+        m1 = [[1,0],[0,1]]
+        m2 = [[1,0],[0,2]]
+        ST.ValidateMatrix(m1, m2)
+    except AssertionError:
+        pass
+    else:
+        raise AssertionError("Expected failure for matrix mismatch")
+
+def test_FailValidateVector():
+    try:
+        v1 = [1,0]
+        v2 = [1,1]
+        ST.ValidateMatrix(v1, v2)
+    except AssertionError:
+        pass
+    else:
+        raise AssertionError("Expected failure for vector mismatch")
