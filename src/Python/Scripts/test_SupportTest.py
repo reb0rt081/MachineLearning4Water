@@ -87,3 +87,13 @@ def test_FailValidateType():
         pass
     else:
         raise AssertionError("Expected failure for type mismatch")
+    
+def test_ValidateMatrix():
+    m1 = [[1,0],[0,1]]
+    m2 = [[1,0],[0,1]]
+    ST.ValidateMatrix(m1, m2)
+
+def test_ValidateVector():
+    v1 = [1,0]
+    v2 = [1,0]
+    ST.ValidateMatrix(v1, v2)

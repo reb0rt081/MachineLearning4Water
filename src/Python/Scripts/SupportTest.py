@@ -26,3 +26,27 @@ def ValidateType(actual, expected):
         f"got {type(actual).__name__}"
     )
     Validate(actual, expected)
+
+def ValidateMatrix(matrix, trueMatrix, tolerance=0.001):
+    """
+    Asserts that every value in matrix matches trueMatrix within tolerance.
+    """    
+
+    # Normalize vectors to 2D
+    if matrix and not isinstance(matrix[0], (list, tuple)):
+        matrix = [matrix]
+        trueMatrix = [trueMatrix]
+
+    # Check dimensions
+    if len(matrix) != len(trueMatrix):
+        raise AssertionError("Row count mismatch")
+
+    for i, (row, true_row) in enumerate(zip(matrix, trueMatrix)):
+        if len(row) != len(true_row):
+            raise AssertionError(f"Row {i} length mismatch")
+
+        for j, (value, true_value) in enumerate(zip(row, true_row)):
+            try:
+                ValidateValue(value, true_value, tolerance)
+            except AssertionError as e:
+                raise AssertionError(f"Matrix[{i}][{j}] error: {e}") from None
